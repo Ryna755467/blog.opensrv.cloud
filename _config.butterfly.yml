@@ -24,7 +24,8 @@ menu:
   标签: /tags/ || fas fa-tags
   文档 || fas fa-book:
     使用文档: /docs/ || fas fa-book-open
-    主题配置: /docs/config/ || fas fa-cog
+    主题配置: /docs/themeConfig/ || fas fa-cog
+    标签插件: /docs/tagPlugins/ || fas fa-puzzle-piece
 
 # --------------------------------------
 # Code Blocks Settings
