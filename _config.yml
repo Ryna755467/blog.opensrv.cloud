@@ -7,7 +7,7 @@ title: opensrv.cloud
 subtitle: blog
 description: ""
 keywords:
-author: ZHANG
+author: Ryna755467
 language: zh-CN
 timezone: Asia/Shanghai
 
@@ -50,10 +50,12 @@ highlight:
   tab_replace: ""
   wrap: true
   hljs: false
+  exclude_languages: ["mermaid"]
 prismjs:
   preprocess: true
   line_number: true
   tab_replace: ""
+  exclude_languages: ["mermaid"]
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -102,3 +104,8 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ""
+
+# KaTeX
+markdown:
+  plugins:
+    - "@renbaoshuo/markdown-it-katex"

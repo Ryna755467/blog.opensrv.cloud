@@ -36,7 +36,7 @@ code_blocks:
   theme: light
   macStyle: false
   # Code block height limit (unit: px)
-  height_limit: false
+  height_limit: 900
   word_wrap: false
 
   # Toolbar
@@ -60,7 +60,7 @@ social:
 favicon: /img/favicon.png
 
 avatar:
-  img: /img/butterfly-icon.png
+  img: /img/avatar.jpg
   effect: false
 
 # Disable all banner images
@@ -70,10 +70,10 @@ disable_top_img: false
 default_top_img:
 
 # The banner image of index page
-index_img:
+index_img: /img/index.jpg
 
 # The banner image of archive page
-archive_img:
+archive_img: /img/archive.jpg
 
 # Note: tag page, not tags page
 tag_img:
@@ -153,7 +153,7 @@ index_top_img_height:
 
 # The subtitle on homepage
 subtitle:
-  enable: false
+  enable: true
   # Typewriter Effect
   effect: true
   # Customize typed.js
@@ -169,6 +169,8 @@ subtitle:
   source: false
   # If you close the typewriter effect, the subtitle will only show the first line of sub
   sub:
+    - Hi, there
+    - Are you ready for a new start?
 
 # Article layout on the homepage
 # 1: Cover on the left, info on the right
@@ -186,7 +188,7 @@ index_layout: 3
 # 3: auto_excerpt (default)
 # false: do not show the article introduction
 index_post_content:
-  method: 3
+  method: 2
   # If you set method to 2 or 3, the length need to config
   length: 500
 
@@ -196,15 +198,15 @@ index_post_content:
 
 toc:
   post: true
-  page: false
+  page: true
   number: true
-  expand: false
+  expand: true
   # Only for post
-  style_simple: false
+  style_simple: true
   scroll_percent: true
 
 post_copyright:
-  enable: true
+  enable: false
   decode: false
   author_href:
   license: CC BY-NC-SA 4.0
@@ -262,8 +264,8 @@ noticeOutdate:
 footer:
   nav:
   owner:
-    enable: true
-    since: 2025
+    enable: false
+    since: 2026
   # Copyright of theme and framework
   copyright:
     enable: true
@@ -292,10 +294,10 @@ aside:
     button:
       enable: true
       icon: fab fa-github
-      text: Follow Me
-      link: https://github.com/xxxxxx
+      text: GitHub
+      link: https://github.com/Ryna755467
   card_announcement:
-    enable: true
+    enable: false
     content: This is my Blog
   card_recent_post:
     enable: true
@@ -322,7 +324,7 @@ aside:
     enable: true
     # If set 0 will show all
     limit: 40
-    color: false
+    color: true
     custom_colors:
     # Order of tags, random/name/length
     orderby: random
@@ -330,7 +332,7 @@ aside:
     order: 1
     sort_order:
   card_archives:
-    enable: true
+    enable: false
     # Type: monthly / yearly
     type: monthly
     # Eg: YYYY年MM月
@@ -349,7 +351,7 @@ aside:
     # Sort of order. 1, asc for ascending; -1, desc for descending
     order: -1
   card_webinfo:
-    enable: true
+    enable: false
     post_count: true
     last_push_date: true
     sort_order:
@@ -397,7 +399,7 @@ darkmode:
   end:
 
 # Show scroll percent in scroll-to-top button
-rightside_scroll_percent: false
+rightside_scroll_percent: true
 
 # Don't modify the following settings unless you know how they work
 # Choose: readmode,translate,darkmode,hideAside,toc,chat,comment
@@ -422,7 +424,7 @@ anchor:
   # Click the headline to scroll and update the anchor
   click_to_scroll: false
 
-photofigcaption: false
+photofigcaption: true
 
 copy:
   enable: true
@@ -457,8 +459,8 @@ busuanzi:
 math:
   # Choose: mathjax, katex
   # Leave it empty if you don't need math
-  use:
-  per_page: true
+  use: katex
+  per_page: false
   hide_scrollbar: false
 
   mathjax:
@@ -469,7 +471,7 @@ math:
 
   katex:
     # Enable the copy KaTeX formula
-    copy_tex: false
+    copy_tex: true
 
 # --------------------------------------
 # Search
@@ -813,9 +815,9 @@ display_mode: light
 
 # Configuration for beautifying the content of the article
 beautify:
-  enable: false
+  enable: true
   # Specify the field to beautify (site or post)
-  field: post
+  field: site
   # Specify the icon to be used as a prefix for the title, such as '\f0c1'
   title_prefix_icon:
   # Specify the color of the title prefix icon, such as '#F47466'
@@ -855,14 +857,14 @@ activate_power_mode:
 # canvas_ribbon
 # See: https://github.com/hustcc/ribbon.js
 canvas_ribbon:
-  enable: false
+  enable: true
   # The size of ribbon
-  size: 150
+  size: 200
   # The opacity of ribbon (0 ~ 1)
   alpha: 0.6
   zIndex: -1
   click_to_change: false
-  mobile: false
+  mobile: true
 
 # Fluttering Ribbon
 canvas_fluttering_ribbon:
@@ -891,8 +893,8 @@ fireworks:
 
 # Mouse click effects: Heart symbol
 click_heart:
-  enable: false
-  mobile: false
+  enable: true
+  mobile: true
 
 # Mouse click effects: words
 clickShowText:
@@ -937,9 +939,9 @@ abcjs:
 # Mermaid
 # https://github.com/mermaid-js/mermaid
 mermaid:
-  enable: false
+  enable: true
   # Write Mermaid diagrams using code blocks
-  code_write: false
+  code_write: true
   # built-in themes: default / forest / dark / neutral
   theme:
     light: default
@@ -1010,7 +1012,7 @@ snackbar:
 
 # Instant.page
 # https://instant.page/
-instantpage: false
+instantpage: true
 
 # Lazyload
 # https://github.com/verlok/vanilla-lazyload
