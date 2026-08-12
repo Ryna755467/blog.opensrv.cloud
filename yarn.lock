@@ -923,10 +923,10 @@ jstransformer@1.0.0:
     is-promise "^2.0.0"
     promise "^7.0.1"
 
-katex@^0.16.46:
-  version "0.16.46"
-  resolved "https://registry.npmjs.org/katex/-/katex-0.16.46.tgz#8e19feefe14aac04c9d6516c086a78f61d06c0b4"
-  integrity sha512-WHy4Coo+bGZyH7NwJKHkS04YFsFcarWbAEOAC3EMndzdN6VSZqklLLIgfxzyaW9jDoeGYJX9SWbJPKpecox0Uw==
+katex@^0.18.2:
+  version "0.18.2"
+  resolved "https://registry.yarnpkg.com/katex/-/katex-0.18.2.tgz#7ab6ff83e21c097a59c9afd213b2d2955fa6c6ce"
+  integrity sha512-3snve4y0SXTMequLim1FMiPvLGElySam0blN5xQZBqEY3lOJz1TnuaaiugnBZBqHzlSAGmFTYL7MCQkORuLKCA==
   dependencies:
     commander "^8.3.0"
 
