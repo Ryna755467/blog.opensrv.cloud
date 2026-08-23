@@ -826,7 +826,7 @@ beautify:
 # Global font settings
 # Don't modify the following settings unless you know how they work
 font:
-  global_font_size:
+  global_font_size: 15px
   code_font_size:
   font_family:
   code_font_family:
@@ -923,7 +923,7 @@ lightbox:
 
 # Series
 series:
-  enable: false
+  enable: true
   # Order by title or date
   orderBy: "title"
   # Sort of order. 1, asc for ascending; -1, desc for descending
@@ -949,7 +949,7 @@ mermaid:
   # Enable "Open in New Tab" button to view diagram in a separate window
   open_in_new_tab: true
   # Enable zoom and pan interactions on diagrams
-  zoom_pan: true
+  zoom_pan: false
 
 # chartjs
 # see https://www.chartjs.org/docs/latest/
