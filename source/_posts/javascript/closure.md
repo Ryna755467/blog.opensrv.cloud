@@ -2,8 +2,8 @@
 title: 闭包
 date: 2026-08-01
 updated: 2026-08-01
-top_img: /img/hello-world.jpg
-cover: /img/hello-world.jpg
+top_img: /img/javascript_top.jpg
+cover: /img/javascript_cover.jpg
 series: javascript
 categories:
   - JavaScript
