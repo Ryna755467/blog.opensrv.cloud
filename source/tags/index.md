@@ -1,6 +1,6 @@
 ---
 title: 标签
 date: 2026-05-15
-top_img: /img/tags.jpg
+top_img: /img/index.jpg
 type: tags
 ---

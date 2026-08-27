@@ -1,7 +1,7 @@
 ---
 title: 使用文档
 date: 2026-05-12
-top_img: /img/docs.jpg
+top_img: /img/index.jpg
 ---
 
 **这里是关于 Butterfly 主题的使用文档。**
