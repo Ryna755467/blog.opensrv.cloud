@@ -3,7 +3,7 @@ title: 事件循环
 date: 2026-08-02
 updated: 2026-08-02
 top_img: /img/javascript_top.jpg
-cover: /img/javascript_cover.jpg
+cover: /img/event-loop_cover.png
 series: javascript
 categories:
   - JavaScript
@@ -35,6 +35,32 @@ JavaScript 的 **异步API** 是由宿主环境提供的，定时器、文件读
 {% note info %}
 JS 采用 **非抢占式调度**，不允许中途打断正在执行的同步代码；一旦允许随时插入回调，执行顺序不可预测，会产生大量难以复现的 Bug。
 {% endnote %}
+
+{% hideToggle 宿主环境和运行时 %}
+**宿主环境** 指承载 JavaScript 代码运行的外部平台，是完整的大环境：
+
+1. 浏览器（Chrome、Firefox）是一类宿主；
+2. Node.js 是另一类宿主；
+3. 小程序引擎、Electron 都属于宿主。
+
+宿主环境会给 JS 注入独有的全局 API：
+
+| 宿主    | API                                              |
+| ------- | ------------------------------------------------ |
+| 浏览器  | `window` / `document` / `setTimeout` / `DOM API` |
+| Node.js | `global` / `fs` / `path` / `net` / `process`     |
+
+**运行时** 是宿主内部专门执行 JS 代码的引擎配套体系，核心分为两部分：
+
+1. JS 引擎（V8、SpiderMonkey、JavaScriptCore等，属于运行时的一部分）：解析、执行 JS 代码；
+2. 运行时底层能力：调用栈、堆内存、任务队列（宏/微任务）、垃圾回收。
+
+**边界区分**
+
+1. **运行时** 只懂 ECMAScript 标准，没有文件、网络、定时器；
+2. **宿主环境** 在运行时基础上，额外提供外部能力，拓展了 JS 边界。
+
+{% endhideToggle %}
 
 早期的浏览器只有宏任务队列，事件循环的过程为：
 

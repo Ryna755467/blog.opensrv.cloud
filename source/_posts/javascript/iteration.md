@@ -3,7 +3,7 @@ title: 遍历
 date: 2026-08-04
 updated: 2026-08-04
 top_img: /img/javascript_top.jpg
-cover: /img/javascript_cover.jpg
+cover: /img/iteration_cover.png
 series: javascript
 categories:
   - JavaScript
@@ -21,10 +21,12 @@ categories:
 
 **参数列表**
 
-1. currentValue：当前遍历的元素
-2. index：当前元素索引（可选）
-3. array：原数组本身（可选）
-4. thisArg：指定回调内的this指向（可选）
+| 参数         | 说明                         |
+| ------------ | ---------------------------- |
+| currentValue | 当前遍历的元素               |
+| index        | 当前元素索引（可选）         |
+| array        | 原数组本身（可选）           |
+| thisArg      | 指定回调内的this指向（可选） |
 
 **调用示例**
 
@@ -178,10 +180,14 @@ const hasNaN = arr.includes(NaN);
 **参数列表**
 
 1. callback (必填)：每个元素执行的函数，包含四个参数：
-   - accumulator (acc)：累计器。它是上一次调用 `callback` 后的返回值，或 `initialValue`；
-   - currentValue (cur)：当前正在处理的元素；
-   - index (可选)：当前元素的索引；
-   - array (可选)：调用 `reduce` 方法的数组本身。
+
+| 参数               | 说明                                                         |
+| ------------------ | ------------------------------------------------------------ |
+| accumulator (acc)  | 累计器 - 上一次调用 `callback` 后的返回值，或 `initialValue` |
+| currentValue (cur) | 当前正在处理的元素                                           |
+| index (可选)       | 当前元素的索引                                               |
+| array (可选)       | 调用 `reduce` 方法的数组本身                                 |
+
 2. initialValue (可选)：第一次调用 `callback` 时 `accumulator` 的初始值。
 
 **调用示例**

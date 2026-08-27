@@ -3,7 +3,7 @@ title: 闭包
 date: 2026-08-01
 updated: 2026-08-01
 top_img: /img/javascript_top.jpg
-cover: /img/javascript_cover.jpg
+cover: /img/closure_cover.png
 series: javascript
 categories:
   - JavaScript
