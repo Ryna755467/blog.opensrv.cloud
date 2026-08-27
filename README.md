@@ -6,3 +6,9 @@
 
 - Butterfly 相关主题配置
 - 新增数学公式和流程图渲染
+
+### v1.0.4 - feat: JavaScript 相关文档
+
+- 新增简/繁转换按钮
+- 新增页面锚点
+- JavaScript 相关文档
