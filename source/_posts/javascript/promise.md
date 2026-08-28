@@ -2,8 +2,8 @@
 title: 异步编程
 date: 2026-08-05
 updated: 2026-08-05
-top_img: /img/javascript_top.jpg
-cover: /img/promise_cover.png
+top_img: /img/series/javascript.jpg
+cover: /img/covers/promise.png
 series: javascript
 categories:
   - JavaScript

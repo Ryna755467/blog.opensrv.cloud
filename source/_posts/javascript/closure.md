@@ -2,8 +2,8 @@
 title: 闭包
 date: 2026-08-01
 updated: 2026-08-01
-top_img: /img/javascript_top.jpg
-cover: /img/closure_cover.png
+top_img: /img/series/javascript.jpg
+cover: /img/covers/closure.png
 series: javascript
 categories:
   - JavaScript

@@ -2,8 +2,8 @@
 title: 垃圾回收
 date: 2026-08-03
 updated: 2026-08-03
-top_img: /img/javascript_top.jpg
-cover: /img/gc_cover.png
+top_img: /img/series/javascript.jpg
+cover: /img/covers/garbage-collection.png
 series: javascript
 categories:
   - JavaScript
@@ -176,7 +176,7 @@ fn();
 
 ### 内存划分
 
-分代回收机制中，堆内存主要划分为两个代：
+分代回收机制中，**堆内存** 主要划分为两个代：
 
 1. 新生代：存放新创建的对象、临时变量，**空间小（通常 1~8MB），GC 频繁，速度极快**。
 2. 老生代：存放存活时间长的大对象、全局变量、闭包，**空间大，GC 不频繁，速度较慢**。
