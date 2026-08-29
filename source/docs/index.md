@@ -433,13 +433,12 @@ const quickSort = (arr) => {
 **参数列表**
 
 1. callback (必填)：对每个元素执行的 **归约函数**，包含四个参数：
-
-| 参数               | 说明                                                         |
-| ------------------ | ------------------------------------------------------------ |
-| accumulator (acc)  | 累计器 - 上一次调用 `callback` 后的返回值，或 `initialValue` |
-| currentValue (cur) | 当前正在处理的元素                                           |
-| index (可选)       | 当前元素的索引                                               |
-| array (可选)       | 调用 `reduce` 方法的数组本身                                 |
+   | 参数 | 说明 |
+   | ------------------ | ------------------------------------------------------------ |
+   | accumulator (acc) | 累计器 - 上一次调用 `callback` 后的返回值，或 `initialValue` |
+   | currentValue (cur) | 当前正在处理的元素 |
+   | index (可选) | 当前元素的索引 |
+   | array (可选) | 调用 `reduce` 方法的数组本身 |
 
 2. initialValue (可选)：第一次调用 `callback` 时 `accumulator` 的 **初始值**。
 
@@ -459,12 +458,12 @@ const quickSort = (arr) => {
 Markdown 是一种轻量级 **标记语言**，它允许人们使用易读易写的 **纯文本格式** 编写文档，Markdown 文件的后缀名是 `.md`。
 {% endnote %}
 
-{% note primary %}
-Markdown 应用程序使用一种称为 **Markdown 处理器**（也通常称为 “解析器” 或 “实现”）的东西将获取到的 `Markdown` 格式的文本输出为 `HTML` 格式。
-{% endnote %}
-
 {% note warning %}
 标签外挂是 Hexo 的标签插件语法，**不是标准的 Markdown 文本**，仅 Butterfly 主题生效，其他平台会原样显示源码，**不会渲染样式**。
+{% endnote %}
+
+{% note primary %}
+Markdown 应用程序使用一种称为 **Markdown 处理器**（也通常称为 “解析器” 或 “实现”）的东西将获取到的 `Markdown` 格式的文本输出为 `HTML` 格式。
 {% endnote %}
 ```
 
@@ -474,12 +473,12 @@ Markdown 应用程序使用一种称为 **Markdown 处理器**（也通常称为
 Markdown 是一种轻量级 **标记语言**，它允许人们使用易读易写的 **纯文本格式** 编写文档，Markdown 文件的后缀名是 `.md`。
 {% endnote %}
 
-{% note primary %}
-Markdown 应用程序使用一种称为 **Markdown 处理器**（也通常称为 “解析器” 或 “实现”）的东西将获取到的 `Markdown` 格式的文本输出为 `HTML` 格式。
-{% endnote %}
-
 {% note warning %}
 标签外挂是 Hexo 的标签插件语法，**不是标准的 Markdown 文本**，仅 Butterfly 主题生效，其他平台会原样显示源码，**不会渲染样式**。
+{% endnote %}
+
+{% note primary %}
+Markdown 应用程序使用一种称为 **Markdown 处理器**（也通常称为 “解析器” 或 “实现”）的东西将获取到的 `Markdown` 格式的文本输出为 `HTML` 格式。
 {% endnote %}
 
 **使用场景**
@@ -733,12 +732,36 @@ Object.entries(obj).forEach(([key, value]) => {
 **MD 语法**
 
 ```markdown
-{% hideToggle ECMAScript 与 JavaScript %}
+{% hideToggle 为什么使用 Markdown %}
+
+当你可以通过按下界面中的按钮来设置文本格式时，为什么还要使用 Markdown 来书写呢？使用 Markdown 而不是 Word 类编辑器的原因有：
+
+1. Markdown 无处不在。StackOverflow、CSDN、掘金、简书、GitBook、有道云笔记、V2EX、光谷社区等。主流的代码托管平台，如 GitHub、GitLab、BitBucket、Coding、Gitee 等等，都支持 Markdown 语法，很多开源项目的 README、开发文档、帮助文档、Wiki 等都用 Markdown 写作。
+
+2. Markdown 是纯文本可移植的。几乎可以使用任何应用程序打开包含 Markdown 格式的文本文件。如果你不喜欢当前使用的 Markdown 应用程序了，则可以将 Markdown 文件导入另一个 Markdown 应用程序中。这与 Microsoft Word 等文字处理应用程序形成了鲜明的对比，Microsoft Word 将你的内容锁定在专有文件格式中。
+
+3. Markdown 是独立于平台的。你可以在运行任何操作系统的任何设备上创建 Markdown 格式的文本。
+
+4. Markdown 能适应未来的变化。即使你正在使用的应用程序将来会在某个时候不能使用了，你仍然可以使用文本编辑器读取 Markdown 格式的文本。当涉及需要无限期保存的书籍、大学论文和其他里程碑式的文件时，这是一个重要的考虑因素。
 
 {% endhideToggle %}
 ```
 
 **渲染效果**
+
+{% hideToggle 为什么使用 Markdown %}
+
+当你可以通过按下界面中的按钮来设置文本格式时，为什么还要使用 Markdown 来书写呢？使用 Markdown 而不是 Word 类编辑器的原因有：
+
+1. Markdown 无处不在。StackOverflow、CSDN、掘金、简书、GitBook、有道云笔记、V2EX、光谷社区等。主流的代码托管平台，如 GitHub、GitLab、BitBucket、Coding、Gitee 等等，都支持 Markdown 语法，很多开源项目的 README、开发文档、帮助文档、Wiki 等都用 Markdown 写作。
+
+2. Markdown 是纯文本可移植的。几乎可以使用任何应用程序打开包含 Markdown 格式的文本文件。如果你不喜欢当前使用的 Markdown 应用程序了，则可以将 Markdown 文件导入另一个 Markdown 应用程序中。这与 Microsoft Word 等文字处理应用程序形成了鲜明的对比，Microsoft Word 将你的内容锁定在专有文件格式中。
+
+3. Markdown 是独立于平台的。你可以在运行任何操作系统的任何设备上创建 Markdown 格式的文本。
+
+4. Markdown 能适应未来的变化。即使你正在使用的应用程序将来会在某个时候不能使用了，你仍然可以使用文本编辑器读取 Markdown 格式的文本。当涉及需要无限期保存的书籍、大学论文和其他里程碑式的文件时，这是一个重要的考虑因素。
+
+{% endhideToggle %}
 
 **使用场景**
 
