@@ -1,27 +1,848 @@
 ---
-title: 使用文档
+title: 写作规范
 date: 2026-05-12
+updated: 2026-08-28
 top_img: /img/index.jpg
 ---
 
-**这里是关于 Butterfly 主题的使用文档。**
+## 基本规则
 
-{% note blue 'fas fa-info-circle' %}
-你可以在这里找到主题配置、标签插件的详细说明与示例用法。
+站点内的文档分为 **分类文档** 和 **标签文档** 两种类型。
+
+### 分类文档
+
+1. 用于存放多个 **同系列** 的文档，一个分类中文档的个数必须大于 `1`。
+2. `front-matter` 必须填写 `series` 字段，用于在文档末尾 **展示系列文档**。
+3. 归属同一个分类的文档使用 **统一的顶部图**。
+4. 归属同一个分类的文档使用 **单独的封面图**，封面的 **主体色调** 需要保持一致。
+
+### 标签文档
+
+1. 用于存放 **零散或聚合类** 的文档，这些文档与其他文档没有归属关系。
+2. `front-matter` 必须填写 `tags` 字段，用于在文档末尾 **展示标签**。
+3. 每个标签文档使用 **单独的顶部图和封面图**。
+
+## Markdown
+
+此章节介绍 **站点内的文档** 会用到的部分 MD 语法，完整的内容请阅览 [MD 参考文档](https://blog.opensrv.cloud/markdown/ "MD 参考文档")。
+
+### 标题
+
+**MD 语法**
+
+```markdown
+# Heading level 1
+
+## Heading level 2
+
+### Heading level 3
+```
+
+**渲染效果**
+
+参考本文的标题渲染效果。
+
+**使用场景**
+
+用于 **划分文章结构** 和 **渲染目录**。
+
+**注意事项**
+
+1. 长文档用三级标题 `# ## ###`，短文档用二级标题 `## ###`，如果没有分级目录，统一用 `###` 标题。
+2. 标题层级不要超过 `3` 层，不要使用 `####`，避免 **目录嵌套过深**。
+
+### 粗体
+
+**MD 语法**
+
+```markdown
+I just love **bold text**.
+```
+
+**渲染效果**
+
+I just love **bold text**.
+
+**使用场景**
+
+1. 用于强调关键信息或概念，**突出长文本的重点内容**，例如：
+   {% note modern no-icon %}
+   程序在运行过程中，已经不再需要使用的内存，没有被操作系统或垃圾回收机制正确释放，导致 **可用内存持续减少** 的现象即 **内存泄露**。
+   {% endnote %}
+
+2. 用于 **短段落的标题**，如果内容区域较短，不要使用 `###` 标题，用 `**` 代替，合理规划目录层级，例如：
+   {% note modern no-icon %}
+   **参数列表**
+
+   **调用示例**
+
+   **注意事项**
+   {% endnote %}
+
+**注意事项**
+
+1. 用作标题时，如果带有列举含义，可以 **加上序号前缀**，例如：
+   {% note modern no-icon %}
+   **1. 外层函数返回内层函数，同时保留对上层变量的引用**
+   {% endnote %}
+
+2. 用作标题时，可以选中行内代码；用作内容时，不要选中代码，**避免过于突出的视觉效果**，例如：
+   {% note modern no-icon %}
+   **`resolve/reject` 中的 this 指向问题**
+   {% endnote %}
+
+3. 粗体文字两侧需要有一个 **空格缩进**，如果某一侧紧邻标点符号则 **省略该侧缩进**。
+4. 选中的文本应 **尽量简短**，避免出现超过一行的粗体文字。
+
+### 引用
+
+**MD 语法**
+
+```markdown
+> Dorothy followed her through many of the beautiful rooms in her castle.
+>
+> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
+```
+
+**渲染效果**
+
+> Dorothy followed her through many of the beautiful rooms in her castle.
+>
+> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
+
+**使用场景**
+
+为了更好的渲染效果，避免在 **站点内的文档** 中使用 `>` 引用，用 `{% note %}` **标签外挂** 代替。
+
+### 链接
+
+**MD 语法**
+
+```markdown
+[Link text](https://www.example.com "Link Title")
+```
+
+**渲染效果**
+
+[Link text](https://www.example.com "Link title")
+
+**使用场景**
+
+1. 用于 **指向另一篇文档**，例如：
+   {% note modern no-icon %}
+   此章节介绍 **站点内的文档** 会用到的部分 MD 语法，完整的内容请阅览 [MD 参考文档](https://blog.opensrv.cloud/markdown/ "MD 参考文档")。
+   {% endnote %}
+
+2. 用于 **跳转外部链接**，例如：
+   {% note modern no-icon %}
+   1. [Hexo - 快速、简洁且高效的博客框架](https://hexo.io/zh-cn/ "Hexo 中文文档")
+   2. [Butterfly - A Simple and Card UI Design theme for Hexo](https://butterfly.js.org/ "Butterfly 主题文档")
+   3. [Rinokit - A react library developed with dumi](https://rinokit.opensrv.cloud/ "Rinokit Library")
+   4. [Markdown教程 - 最简明的Markdown语法入门指南](https://markdown.com.cn/ "Markdown 教程")
+      {% endnote %}
+
+**注意事项**
+
+必须填写链接的标题，应 **尽量简短**。
+
+### 代码
+
+**MD 语法**
+
+```markdown
+At the command prompt, type `nano`.
+```
+
+**渲染效果**
+
+At the command prompt, type `nano`.
+
+**使用场景**
+
+1. 用于变量、方法、类名、取值、关键字等 **行内代码**，例如：
+   {% note modern no-icon %}
+   `state` / `resolve()` / `Promise` / `undefined` / `async`。
+   {% endnote %}
+
+2. 用于 **单行代码**，例如：
+   {% note modern no-icon %}
+   `Array.from(arrayLike, mapFn?, thisArg?)`
+   {% endnote %}
+
+**注意事项**
+
+1. 渲染静态方法时需要写上 **归属的构造函数**，例如 `Promise.all`。
+2. 代码两侧需要有一个 **空格缩进**，如果某一侧紧邻标点符号则 **省略该侧缩进**。
+3. 如果一个字符在段落内 **频繁出现**，为了方便阅读，不要使用行内代码渲染它。
+4. 不要使用行内代码渲染 **中文字符**。
+
+### 代码块
+
+**MD 语法**
+
+````markdown
+```javascript
+const quickSort = (arr) => {
+  if (arr.length <= 1) return arr;
+  const p = arr[Math.floor(arr.length / 2)];
+  return [
+    ...quickSort(arr.filter((x) => x < p)),
+    ...arr.filter((x) => x === p),
+    ...quickSort(arr.filter((x) => x > p)),
+  ];
+};
+```
+````
+
+**渲染效果**
+
+```javascript
+const quickSort = (arr) => {
+  if (arr.length <= 1) return arr;
+  const p = arr[Math.floor(arr.length / 2)];
+  return [
+    ...quickSort(arr.filter((x) => x < p)),
+    ...arr.filter((x) => x === p),
+    ...quickSort(arr.filter((x) => x > p)),
+  ];
+};
+```
+
+**使用场景**
+
+用于渲染 **多行代码**。
+
+**注意事项**
+
+1. 在嵌套结构中，**内层的代码块不会被渲染**。
+2. 可以用不同数量的点号区分层级，例如：外层用 ` ```` `，内层用 ` ``` `。
+
+### 有序列表
+
+**MD 语法**
+
+```markdown
+1. First item
+2. Second item
+3. Third item
+   - Indented item
+   - Indented item
+4. Fourth item
+```
+
+**渲染效果**
+
+1. First item
+2. Second item
+3. Third item
+   - Indented item
+   - Indented item
+4. Fourth item
+
+**使用场景**
+
+在此站点使用的主题中，有序列表的渲染效果优于无序列表，因此任何列举场景都 **优先使用有序列表**，例如：
+
+{% note modern no-icon %}
+分代回收机制中，**堆内存** 主要划分为两个代：
+
+1. 新生代：存放新创建的对象、临时变量，**空间小（通常 1~8MB），GC 频繁，速度极快**。
+2. 老生代：存放存活时间长的大对象、全局变量、闭包，**空间大，GC 不频繁，速度较慢**。
+
 {% endnote %}
 
-{% note orange 'fas fa-exclamation-circle' %}
-所有写法只适用于 Butterfly 主题
+**注意事项**
+
+1. 不要用作 **段落的标题**。标题为纯行内代码时用 `{% label %}` 标签外挂代替；含有其他字符时用 `**` 代替。
+2. 子列表用 **无序列表** 渲染。
+
+### 无序列表
+
+**MD 语法**
+
+```markdown
+- First item
+- Second item
+- Third item
+  1. Indented item
+  2. Indented item
+- Fourth item
+```
+
+**渲染效果**
+
+- First item
+- Second item
+- Third item
+  1. Indented item
+  2. Indented item
+- Fourth item
+
+**使用场景**
+
+仅用于 **有序列表的子列表**，例如：
+
+{% note modern no-icon %}
+
+1. `async` 用来标记函数是 **异步函数**：
+
+- `async function fn() {}` 或者箭头函数 `const fn = async () => {}`；
+- 异步函数的返回值会自动包装成 Promise：如果返回普通值，会变成 `Promise.resolve(普通值)`；如果抛出错误，会变成 `Promise.reject(错误)`。
+
+2. `await` 只能在 `async` 函数内部使用：
+
+- `await` 后面一般跟 Promise 对象，作用是暂停当前 `async` 函数的执行，等待状态变更为 `fulfilled` 后，再继续执行后面的代码；
+- `await` 的返回值就是 Promise 成功的结果；如果状态变为 `rejected`，会 **抛出错误**，需要外层用 `try/catch` 捕获。
+
 {% endnote %}
 
-## 文档导航
+**注意事项**
 
-### 主题配置
+为了更明显的区分，子列表用 **有序列表** 渲染，形成 **有序列表 -> 无序列表 -> 有序列表** 的嵌套结构。
 
-- 关于 Buttefly 主题的配置文件 `_config.butterfly.yml` 的介绍。
-- 链接：[/docs/themeConfig/](/docs/themeConfig/)
+### 分隔线
 
-### 标签插件
+**MD 语法**
 
-- 关于 Butterfly 主题的标签插件 `Tag Plugins` 的示例代码与效果展示。
-- 链接：[/docs/tagPlugins/](/docs/tagPlugins/)
+```markdown
+---
+```
+
+**渲染效果**
+
+---
+
+**使用场景**
+
+1. 用于分隔正文和相关链接，例如：
+   {% note modern no-icon %}
+
+   ***
+
+   {% series javascript %}
+   {% endnote %}
+
+2. 用于分隔以 `{% label %}` 为主标题、以粗体文字为副标题的 **长段落**，例如：
+   {% note modern no-icon %}
+
+   ***
+
+   {% label map pink %}
+   对每一项执行回调，把回调的返回值收集为新数组返回，**原数组保持不变**。
+
+   `const newArr = arr.map(callback(currentValue, index, array), thisArg)`
+
+   语法和参数与 `forEach` 方法完全一致。
+
+   **调用示例**
+   {% endnote %}
+
+**注意事项**
+
+合理规划文档结构，避免使用分隔线 **划分短段落**。
+
+### 表格
+
+**MD 语法**
+
+```markdown
+| Syntax    | Description |
+| --------- | ----------- |
+| Header    | Title       |
+| Paragraph | Text        |
+```
+
+**渲染效果**
+
+| Syntax    | Description |
+| --------- | ----------- |
+| Header    | Title       |
+| Paragraph | Text        |
+
+**使用场景**
+
+1.  用于函数的 **参数列表**，参数列不用渲染为行内代码，例如：
+    {% note modern no-icon %}
+    `Array.from(arrayLike, mapFn?, thisArg?)`
+
+    | 参数      | 说明                                     |
+    | --------- | ---------------------------------------- |
+    | arrayLike | 要转换的类数组对象或可迭代对象           |
+    | mapFn     | 映射函数，相当于对每个元素执行一次 `map` |
+    | thisArg   | 执行 `mapFn` 时的 `this` 指向            |
+
+    {% endnote %}
+
+2.  用于带有列举或对比含义的 **短文本列表**。
+
+**注意事项**
+
+默认对齐方式为：标题居中对齐，列表项左对齐，不要使用 `| :---        |    :----:   |          ---: |` 修改对齐方式。
+
+## 标签外挂
+
+此章节介绍 **站点内的文档** 会用到的部分标签外挂，完整的内容请阅览 [Butterfly 文档(四) 标签外挂](https://butterfly.js.org/posts/ceeb73f/ "Butterfly 标签外挂")。
+
+### Label
+
+**MD 语法**
+
+```markdown
+{% label bubbleSort blue %}
+
+{% label selectionSort orange %}
+
+{% label insertionSort green %}
+
+{% label mergeSort red %}
+
+{% label quickSort pink %}
+
+{% label heapSort purple %}
+
+{% label countingSort default %}
+```
+
+**渲染效果**
+
+{% label bubbleSort blue %}
+
+{% label selectionSort orange %}
+
+{% label insertionSort green %}
+
+{% label mergeSort red %}
+
+{% label quickSort pink %}
+
+{% label heapSort purple %}
+
+{% label countingSort default %}
+
+**使用场景**
+
+**纯行内代码** 用作小标题时，使用更醒目的 `{% label %}` 标签展示，例如：
+
+{% note modern no-icon %}
+
+{% label reduce pink %}
+对数组中的每个元素执行一个 **归约函数** `reducer`，将其结果汇总为 **单个任意类型** 的返回值。
+
+**参数列表**
+
+1. callback (必填)：对每个元素执行的 **归约函数**，包含四个参数：
+
+| 参数               | 说明                                                         |
+| ------------------ | ------------------------------------------------------------ |
+| accumulator (acc)  | 累计器 - 上一次调用 `callback` 后的返回值，或 `initialValue` |
+| currentValue (cur) | 当前正在处理的元素                                           |
+| index (可选)       | 当前元素的索引                                               |
+| array (可选)       | 调用 `reduce` 方法的数组本身                                 |
+
+2. initialValue (可选)：第一次调用 `callback` 时 `accumulator` 的 **初始值**。
+
+{% endnote %}
+
+**注意事项**
+
+1. `color` 可选值为 `blue, orange, green, pink, purple, default`。
+2. `{% label %}` 标签两侧需要有一个 **空格缩进**，如果某一侧紧邻标点符号则 **省略该侧缩进**。
+
+### Note
+
+**MD 语法**
+
+```markdown
+{% note info %}
+Markdown 是一种轻量级 **标记语言**，它允许人们使用易读易写的 **纯文本格式** 编写文档，Markdown 文件的后缀名是 `.md`。
+{% endnote %}
+
+{% note primary %}
+Markdown 应用程序使用一种称为 **Markdown 处理器**（也通常称为 “解析器” 或 “实现”）的东西将获取到的 `Markdown` 格式的文本输出为 `HTML` 格式。
+{% endnote %}
+
+{% note warning %}
+标签外挂是 Hexo 的标签插件语法，**不是标准的 Markdown 文本**，仅 Butterfly 主题生效，其他平台会原样显示源码，**不会渲染样式**。
+{% endnote %}
+```
+
+**渲染效果**
+
+{% note info %}
+Markdown 是一种轻量级 **标记语言**，它允许人们使用易读易写的 **纯文本格式** 编写文档，Markdown 文件的后缀名是 `.md`。
+{% endnote %}
+
+{% note primary %}
+Markdown 应用程序使用一种称为 **Markdown 处理器**（也通常称为 “解析器” 或 “实现”）的东西将获取到的 `Markdown` 格式的文本输出为 `HTML` 格式。
+{% endnote %}
+
+{% note warning %}
+标签外挂是 Hexo 的标签插件语法，**不是标准的 Markdown 文本**，仅 Butterfly 主题生效，其他平台会原样显示源码，**不会渲染样式**。
+{% endnote %}
+
+**使用场景**
+
+1. 用于信息扩充，例如：
+   {% note info %}
+   `async/await` 本质是 **生成器 + Promise + 自动执行器** 的语法糖。
+   {% endnote %}
+
+2. 用于易错提示，例如：
+   {% note warning %}
+   `resolve` 和 `reject` 不是原型方法。它是构造函数内部的闭包函数，**只允许执行器调用**，不对外暴露。
+   {% endnote %}
+
+3. 用于关键延伸内容，例如：
+   {% note primary %}
+   正因为Scavenge算法把存活对象都复制到了新区域，因此它可以**避免一次完整的内存遍历**，同时完全**避免产生碎片化内存**；但它需要两倍的内存区域，不适合大对象GC。
+   {% endnote %}
+
+4. 用于背景机制说明，例如：
+   {% note success %}
+   `entries()` 返回的对象同时满足 **迭代器** 和 **可迭代对象** 的定义，既实现了 `next` 方法，又实现了 `Symbol.iterator` 方法（**返回它自身**），因此它可以被 `for...of` 遍历。
+   {% endnote %}
+
+**注意事项**
+
+1. 属于正文的内容不要使用 `{% note %}` 标签。
+
+2. `class` 属性可选值为 `info, warning, primary, success, danger, default`，其中 `danger` 过于醒目，不要在 **站点内的文档** 中使用。
+
+3. 当文本超过两行时，使用 `no-icon` 参数隐藏图标，**让内容区域更紧凑**，例如：
+   {% note success no-icon %}
+   **临时包装对象**
+   字符串、数字、布尔值都是基本数据类型，本质不是对象，是不能调用方法、访问属性的。JS 为了让基本类型也能方便地使用配套能力，设计了 **临时包装对象机制**。
+
+   对基本数据类型调用方法、访问属性时（比如 `str.length`），JS 会自动做3件事：
+   1. 临时创建一个和字符串值对应的 **引用类型实例**（也就是包装对象）；
+   2. 在这个 **临时对象** 上执行对应的操作（比如调用方法、访问属性）；
+   3. 操作完成后立刻销毁这个临时对象，不留下任何痕迹。
+      {% endnote %}
+
+### Tabs
+
+**MD 语法**
+
+````markdown
+{% tabs sorting-algorithms, 1 %}
+
+<!-- tab 冒泡排序 -->
+
+```javascript
+function bubbleSort(arr) {
+  const n = arr.length;
+  for (let i = 0; i < n - 1; i++) {
+    for (let j = 0; j < n - 1 - i; j++) {
+      if (arr[j] > arr[j + 1]) {
+        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+      }
+    }
+  }
+  return arr;
+}
+```
+
+<!-- endtab -->
+
+<!-- tab 选择排序 -->
+
+```javascript
+function selectionSort(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    let minIdx = i;
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[minIdx]) minIdx = j;
+    }
+    [arr[i], arr[minIdx]] = [arr[minIdx], arr[i]];
+  }
+  return arr;
+}
+```
+
+<!-- endtab -->
+
+<!-- tab 插入排序 -->
+
+```javascript
+function insertionSort(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    let key = arr[i];
+    let j = i - 1;
+    while (j >= 0 && arr[j] > key) {
+      arr[j + 1] = arr[j];
+      j--;
+    }
+    arr[j + 1] = key;
+  }
+  return arr;
+}
+```
+
+<!-- endtab -->
+
+{% endtabs %}
+````
+
+**渲染效果**
+
+{% tabs sorting-algorithms, 1 %}
+
+<!-- tab 冒泡排序 -->
+
+```javascript
+function bubbleSort(arr) {
+  const n = arr.length;
+  for (let i = 0; i < n - 1; i++) {
+    for (let j = 0; j < n - 1 - i; j++) {
+      if (arr[j] > arr[j + 1]) {
+        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+      }
+    }
+  }
+  return arr;
+}
+```
+
+<!-- endtab -->
+
+<!-- tab 选择排序 -->
+
+```javascript
+function selectionSort(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    let minIdx = i;
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[minIdx]) minIdx = j;
+    }
+    [arr[i], arr[minIdx]] = [arr[minIdx], arr[i]];
+  }
+  return arr;
+}
+```
+
+<!-- endtab -->
+
+<!-- tab 插入排序 -->
+
+```javascript
+function insertionSort(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    let key = arr[i];
+    let j = i - 1;
+    while (j >= 0 && arr[j] > key) {
+      arr[j + 1] = arr[j];
+      j--;
+    }
+    arr[j + 1] = key;
+  }
+  return arr;
+}
+```
+
+<!-- endtab -->
+
+{% endtabs %}
+
+**使用场景**
+
+仅用于 **带有列举含义** 的代码块，例如：
+
+{% note modern no-icon %}
+**`resolve/reject` 中的 this 指向问题**
+
+`class` 内部自动开启 **严格模式**，`resolve()` 被执行器调用时 `this = undefined`，解决方案有：
+
+{% tabs this_binding, 1 %}
+
+<!-- tab 箭头函数锁定 -->
+
+```javascript
+const resolve = (value) => {
+  if (this.state !== "pending") return;
+  this.state = "fulfilled";
+  this.result = value;
+  this.callbacks.forEach((item) => item.onFulfilled(value));
+};
+```
+
+<!-- endtab -->
+
+<!-- tab 绑定当前实例 -->
+
+```javascript
+const resolve = function (value) {
+  if (this.state !== "pending") return;
+  this.state = "fulfilled";
+  this.result = value;
+  this.callbacks.forEach((item) => item.onFulfilled(value));
+}.bind(this);
+```
+
+<!-- endtab -->
+
+<!-- tab 闭包捕获 -->
+
+```javascript
+const _this = this; // 缓存实例
+const resolve = function (value) {
+  if (_this.state !== "pending") return;
+  _this.state = "fulfilled";
+  _this.value = value;
+  _this.callbacks.forEach((item) => item.onFulfilled(value));
+};
+```
+
+<!-- endtab -->
+
+{% endtabs %}
+{% endnote %}
+
+**注意事项**
+
+如果每个列举项的代码块都较短，直接 **聚合为一个代码块** 即可，不要使用 `{% tabs %}` 标签，例如：
+
+{% note modern no-icon %}
+
+以下方法只处理对象自身的属性，**不会遍历到原型链**：
+
+```javascript
+const obj = { name: "Alice", age: 25 };
+
+// 获取键列表
+Object.keys(obj).forEach((key) => {
+  console.log(key); // 'name', 'age'
+});
+
+// 获取值列表
+Object.values(obj).forEach((value) => {
+  console.log(value); // 'Alice', 25
+});
+
+// 获取键值对
+Object.entries(obj).forEach(([key, value]) => {
+  console.log(key, value); // 'name' 'Alice', 'age' 25
+});
+```
+
+{% endnote %}
+
+### Hide Toggle
+
+**MD 语法**
+
+```markdown
+{% hideToggle ECMAScript 与 JavaScript %}
+
+{% endhideToggle %}
+```
+
+**渲染效果**
+
+**使用场景**
+
+用于 **和文档相关的边缘内容** 的介绍，例如：
+
+{% hideToggle 类数组对象 %}
+类数组对象是指：拥有 `length` 属性和索引元素（`0, 1, 2...`），但不具备数组的方法（如 `push、forEach、map` 等）的对象。
+
+一个对象要被称为 **类数组对象**，必须满足两个条件：
+
+1. 有 `length` 属性（数字，表示长度）；
+2. 有索引属性（`key` 是 `0, 1, 2...` 的数字，且从 `0` 开始连续）。
+
+{% tabs array‑like, 1 %}
+
+<!-- tab arguments -->
+
+```javascript
+function test() {
+  console.log(arguments); // {0: 'a', 1: 'b', 2: 'c', length: 3}
+  console.log(Array.isArray(arguments)); // false
+  console.log(arguments.length); // 3
+}
+test("a", "b", "c");
+```
+
+<!-- endtab -->
+
+<!-- tab DOM 集合 -->
+
+```javascript
+const divs = document.querySelectorAll("div");
+console.log(divs); // NodeList(3) [div, div, div]
+console.log(divs.length); // 3
+console.log(divs[0]); // 第一个 div 元素
+console.log(Array.isArray(divs)); // false
+```
+
+<!-- endtab -->
+
+<!-- tab 字符串 -->
+
+```javascript
+const str = "hello";
+console.log(str.length); // 5
+console.log(str[0]); // 'h'
+console.log(Array.isArray(str)); // false
+```
+
+<!-- endtab -->
+
+<!-- tab 自定义对象 -->
+
+```javascript
+const arrayLike = {
+  0: "apple",
+  1: "banana",
+  2: "orange",
+  length: 3,
+};
+```
+
+<!-- endtab -->
+
+{% endtabs %}
+
+{% endhideToggle %}
+
+**注意事项**
+
+如果内容区域较短，应该使用 `{% note %}` 标签展示。
+
+### Series
+
+**MD 语法**
+
+```markdown
+---
+
+{% series javascript %}
+```
+
+**渲染效果**
+
+---
+
+{% series javascript %}
+
+**使用场景**
+
+仅在 **分类文档** 的末尾使用。
+
+**注意事项**
+
+确保文档的 `front-matter` 中包含 `series` 字段，例如：
+
+```markdown
+---
+series: javascript
+...
+---
+```
+
+## 相关链接
+
+1. [Hexo - 快速、简洁且高效的博客框架](https://hexo.io/zh-cn/ "Hexo 中文文档")
+2. [Butterfly - A Simple and Card UI Design theme for Hexo](https://butterfly.js.org/ "Butterfly 主题文档")
+3. [Rinokit - A react library developed with dumi](https://rinokit.opensrv.cloud/ "Rinokit Library")
+4. [Markdown教程 - 最简明的Markdown语法入门指南](https://markdown.com.cn/ "Markdown 教程")
