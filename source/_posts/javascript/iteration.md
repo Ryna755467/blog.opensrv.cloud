@@ -188,13 +188,12 @@ const hasNaN = arr.includes(NaN);
 **参数列表**
 
 1. callback (必填)：对每个元素执行的 **归约函数**，包含四个参数：
-
-| 参数               | 说明                                                         |
-| ------------------ | ------------------------------------------------------------ |
-| accumulator (acc)  | 累计器 - 上一次调用 `callback` 后的返回值，或 `initialValue` |
-| currentValue (cur) | 当前正在处理的元素                                           |
-| index (可选)       | 当前元素的索引                                               |
-| array (可选)       | 调用 `reduce` 方法的数组本身                                 |
+   | 参数 | 说明 |
+   | ------------------ | ------------------------------------------------------------ |
+   | accumulator (acc) | 累计器 - 上一次调用 `callback` 后的返回值，或 `initialValue` |
+   | currentValue (cur) | 当前正在处理的元素 |
+   | index (可选) | 当前元素的索引 |
+   | array (可选) | 调用 `reduce` 方法的数组本身 |
 
 2. initialValue (可选)：第一次调用 `callback` 时 `accumulator` 的 **初始值**。
 
