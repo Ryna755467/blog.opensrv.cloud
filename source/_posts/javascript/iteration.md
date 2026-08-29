@@ -2,8 +2,8 @@
 title: 遍历
 date: 2026-08-04
 updated: 2026-08-04
-top_img: /img/javascript_top.jpg
-cover: /img/iteration_cover.png
+top_img: /img/series/javascript.jpg
+cover: /img/covers/iteration.png
 series: javascript
 categories:
   - JavaScript
@@ -13,9 +13,8 @@ categories:
 
 ## 全量遍历
 
-**forEach：无返回值，仅执行逻辑**
-
-遍历数组，对每一项执行回调函数，**无返回值**，除非抛出错误否则无法中断遍历。
+{% label forEach blue %}
+遍历数组，对每一项执行回调函数，**无返回值**，除非抛出错误否则 **无法中断遍历**。
 
 `arr.forEach(callback(currentValue, index, array), thisArg)`
 
@@ -25,7 +24,7 @@ categories:
 | ------------ | ---------------------------- |
 | currentValue | 当前遍历的元素               |
 | index        | 当前元素索引（可选）         |
-| array        | 原数组本身（可选）           |
+| array        | 调用方法的原数组（可选）     |
 | thisArg      | 指定回调内的this指向（可选） |
 
 **调用示例**
@@ -43,7 +42,7 @@ const context = {
 fruits.forEach(function (currentValue, index, arr) {
   console.log("当前元素：", currentValue);
   console.log("当前索引：", index);
-  // 正在遍历的原数组本身（可以用来校验/修改原数组）
+  // 调用方法的原数组（可以用来校验/修改原数组）
   console.log("原数组：", arr);
   this.printFruit(currentValue);
 }, context);
@@ -52,14 +51,13 @@ fruits.forEach(function (currentValue, index, arr) {
 
 **注意事项**
 
-1. 函数参数是按位置匹配的，如果要拿到第三个参数 `array`，前面的两个参数必须占位置，不能直接跳过第二个写第三个，不需要的参数可以用 `_` 占位。
-2. 如果要让 `thisArg` 生效，回调函数就不能用箭头函数；如果回调函数内部是一个复用的代码块，那么可以用 `thisArg` 参数设置 `this`，避免在复用代码块内部硬编码。
+1. 函数参数是 **按位置匹配** 的，如果要拿到第三个参数 `array`，前面的两个参数必须占位置，不能直接跳过第二个写第三个，不需要的参数可以用 `_` 占位。
+2. 如果要让 `thisArg` 生效，回调函数就 **不能用箭头函数**；如果回调函数内部是一个复用的代码块，那么可以用 `thisArg` 参数设置 `this`，避免在复用代码块内部硬编码。
 
 ---
 
-**map：返回新数组**
-
-对每一项执行回调，把回调的返回值收集为新数组返回，原数组保持不变。
+{% label map pink %}
+对每一项执行回调，把回调的返回值收集为新数组返回，**原数组保持不变**。
 
 `const newArr = arr.map(callback(currentValue, index, array), thisArg)`
 
@@ -94,8 +92,8 @@ const names = users.map((user) => user.name); // ['张三','李四']
 
 **注意事项**
 
-1. map 必须有返回值，如果回调里没有写 `return`，新数组的对应项会是 `undefined` 。
-2. 如果不需要生成新数组，只是想遍历执行操作，直接用 `forEach` 即可，`map` 会额外创建新数组浪费内存。
+1. map **必须有返回值**，如果回调里没有写 `return`，新数组的对应项会是 `undefined` 。
+2. 如果不需要生成新数组，只是想遍历执行操作，直接用 `forEach` 即可，`map` 会额外创建新数组 **浪费内存**。
 
 ## 条件遍历
 
@@ -103,13 +101,16 @@ const names = users.map((user) => user.name); // ['张三','李四']
 
 **通用参数规则**
 
-1. 回调第一个参数：当前遍历的元素 currentValue
-2. 回调第二个参数：当前元素的索引 index（可选）
-3. 回调第三个参数：调用方法的原数组 array（可选）
+| 参数         | 说明                     |
+| ------------ | ------------------------ |
+| currentValue | 当前遍历的元素           |
+| index        | 当前元素索引（可选）     |
+| array        | 调用方法的原数组（可选） |
 
 **条件遍历方法**
 
-1. **filter**：提取所有满足条件的元素，返回新数组。
+{% label filter blue %}
+提取 **所有满足条件** 的元素，返回新数组。
 
 ```javascript
 const goods = [
@@ -121,7 +122,8 @@ const goods = [
 const highPriceGoods = goods.filter((item) => item.price > 100);
 ```
 
-2. **find**：返回第一个满足条件的元素，找到后立即停止遍历，找不到则返回 `undefined`。
+{% label find orange %}
+返回 **第一个符合条件** 的元素，找到后立即停止遍历，找不到则返回 `undefined`。
 
 ```javascript
 const users = [{ name: "李四" }, { name: "张三" }, { name: "张三" }];
@@ -130,7 +132,8 @@ const targetUser = users.find((item) => item.name === "张三");
 // 结果：{name: '张三'}（只返回第一个匹配项）
 ```
 
-3. **findIndex**：和 `find` 逻辑一致，返回第一个符合条件元素的索引，找不到则返回 `-1`。
+{% label findIndex green %}
+和 `find` 逻辑一致，返回 **第一个符合条件** 的元素索引，找不到则返回 `-1`。
 
 ```javascript
 const nums = [10, 20, 30, 40];
@@ -139,7 +142,8 @@ const index = nums.findIndex((num) => num > 25);
 // 结果：2（对应元素30的索引）
 ```
 
-4. **some**：判断数组中是否存在至少一个满足条件的元素，找到就停止遍历并返回 `true`，否则返回 `false`。
+{% label some red %}
+判断数组中是否存在 **至少一个符合条件** 的元素，找到就停止遍历并返回 `true`，否则返回 `false`。
 
 ```javascript
 const scores = [59, 60, 85];
@@ -148,7 +152,8 @@ const hasFail = scores.some((score) => score < 60);
 // 结果：true（存在59分的不及格项）
 ```
 
-5. **every**：判断数组中是否所有元素都满足条件，有一个不符合就停止遍历并返回 `false`，否则返回 `true`。
+{% label every pink %}
+判断数组中是否 **所有元素都符合条件**，有一个不符合就停止遍历并返回 `false`，否则返回 `true`。
 
 ```javascript
 const ages = [18, 22, 25];
@@ -157,7 +162,8 @@ const isAllAdult = ages.every((age) => age >= 18);
 // 结果：true（所有年龄都成年）
 ```
 
-6. **indexOf**：查找指定元素在数组中第一次出现的索引，本质是按 `===` 条件匹配，找不到则返回 `-1`。
+{% label indexOf purple %}
+查找指定元素在数组中 **第一次出现** 的索引，本质是按 `===` 条件匹配，找不到则返回 `-1`。
 
 ```javascript
 const arr = ["a", "b", "c", "b"];
@@ -166,7 +172,8 @@ const index = arr.indexOf("b");
 // 结果：1
 ```
 
-7. **includes**：判断数组中是否包含指定元素，也是按 `===` 匹配，返回布尔值。
+{% label includes blue %}
+判断数组中是否 **包含指定元素**，也是按 `===` 条件匹配，返回布尔值。
 
 ```javascript
 const arr = [1, 2, 3, NaN];
@@ -175,11 +182,12 @@ const hasNaN = arr.includes(NaN);
 // 结果：true（比indexOf更友好，能正确识别NaN）
 ```
 
-8. **reduce**：对数组中的每个元素执行一个归约函数（reducer），将其结果汇总为单个任意类型的返回值。
+{% label reduce pink %}
+对数组中的每个元素执行一个 **归约函数** `reducer`，将其结果汇总为 **单个任意类型** 的返回值。
 
 **参数列表**
 
-1. callback (必填)：每个元素执行的函数，包含四个参数：
+1. callback (必填)：对每个元素执行的 **归约函数**，包含四个参数：
 
 | 参数               | 说明                                                         |
 | ------------------ | ------------------------------------------------------------ |
@@ -188,7 +196,7 @@ const hasNaN = arr.includes(NaN);
 | index (可选)       | 当前元素的索引                                               |
 | array (可选)       | 调用 `reduce` 方法的数组本身                                 |
 
-2. initialValue (可选)：第一次调用 `callback` 时 `accumulator` 的初始值。
+2. initialValue (可选)：第一次调用 `callback` 时 `accumulator` 的 **初始值**。
 
 **调用示例**
 {% tabs reduce, 3 %}
@@ -244,8 +252,8 @@ console.log(result2); // [4, 8, 12]
 
 **注意事项**
 
-1. 如果提供了 `initialValue`：`accumulator` 第一次等于 `initialValue` ，`callback` 从数组的第一个元素开始执行。
-2. 如果没有提供 `initialValue`：`accumulator` 第一次等于数组的第一个元素，`callback` 从数组的第二个元素开始执行。
+1. 如果提供了 `initialValue`：`accumulator` 第一次等于 `initialValue` ，`callback` 从数组的 **第一个元素** 开始执行。
+2. 如果没有提供 `initialValue`：`accumulator` 第一次等于数组的第一个元素，`callback` 从数组的 **第二个元素** 开始执行。
 
 {% note primary no-icon %}
 **reduce 与 map、forEach 的区别**

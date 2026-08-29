@@ -2,8 +2,8 @@
 title: 异步编程
 date: 2026-08-05
 updated: 2026-08-05
-top_img: /img/javascript_top.jpg
-cover: /img/promise_cover.png
+top_img: /img/series/javascript.jpg
+cover: /img/covers/promise.png
 series: javascript
 categories:
   - JavaScript
@@ -12,7 +12,7 @@ categories:
 ## 异步编程体系
 
 {% note primary %}
-JS 是 **单线程 + 事件循环**，所有耗时操作丢给浏览器 / Node 底层多线程处理，完成后把回调推入 **任务队列**，主线程同步代码执行完再取队列执行。所有异步方案，全部基于 `回调函数入队执行` 这套底层机制搭建。
+JS 是 **单线程 + 事件循环**，所有耗时操作丢给浏览器 / Node 底层多线程处理，完成后把回调推入 **任务队列**，主线程同步代码执行完再取队列执行。所有异步方案，全部基于 **回调函数入队执行** 这套底层机制搭建。
 {% endnote %}
 
 ### 回调函数模式
@@ -123,30 +123,30 @@ ids.forEach((id) => {
 
 ### 发展历程
 
-{% timeline %}
+{% timeline 1995 年 12 月，JavaScript 对外发布。 %}
 
-<!-- timeline 1995 - 2009年 -->
+<!-- timeline 1995 - 2009 年 -->
 
 **原始回调模式**
 浏览器的 `setTimeout`、`XMLHttpRequest` 方法。
 
 <!-- endtimeline -->
 
-<!-- timeline 2009 - 2015年 -->
+<!-- timeline 2009 - 2015 年 -->
 
 **流程控制库**
 `Async.js`、`jQuery.Deferred`、事件发布订阅、Thunk 模式。
 
 <!-- endtimeline -->
 
-<!-- timeline 2015 - 2017年 -->
+<!-- timeline 2015 - 2017 年 -->
 
 **规范过渡阶段**
 原生 Promise 正式成为语言标准（ES6），**Promise 开始普及**。
 
 <!-- endtimeline -->
 
-<!-- timeline 2017 - 至今 -->
+<!-- timeline 2017 年 - 至今 -->
 
 **标准异步范式**
 引入了 `async / await` 语法糖（ES8），形成了 **标准异步范式**。
@@ -167,7 +167,7 @@ Promise 从规范层面 **统一了异步操作的接口**，解决了上述所�
 
 ## Promise 实现原理
 
-一个异步操作，对应三种状态：**正在执行 / 执行成功 / 执行失败**，当异步操作结束时，执行对应的 `成功/失败` 回调。
+一个异步操作，对应三种状态：**正在执行 / 执行成功 / 执行失败**，当异步操作结束时，执行对应的 **成功 / 失败** 回调。
 
 1. 需要有一个属性保存 **异步任务的状态**；
 2. 需要有一个属性保存 **异步任务的执行结果**；
@@ -191,17 +191,17 @@ Promise 从规范层面 **统一了异步操作的接口**，解决了上述所�
 
 ### 构造函数
 
-创建一个 Promise 实例，需要同时传入一个执行器函数来 **启动异步任务**。
+创建一个 Promise 实例，需要传入一个执行器函数来 **启动异步任务**。
 
-执行器函数是用户定义的，Promise 自身无法感知异步操作什么时候完成、成功还是失败。因此需要定义 `resolve` 和 `reject` 方法，让用户在异步逻辑完成时，**主动通知** Promise：任务成功 / 任务失败。
+执行器函数是用户定义的，Promise 自身 **无法感知** 异步操作什么时候完成、成功还是失败。因此需要定义 `resolve` 和 `reject` 方法，让用户在异步逻辑完成时，**主动通知** Promise：任务成功 / 任务失败。
 
 {% note info no-icon %}
 **必须在构造函数内部调用执行器函数**
-Promise 实现了状态控制器、状态机、回调队列的 **封装**。只有在 Promise **内部启动异步任务**，才能保证任务完成的通知只通过受控的 `resolve/reject` 触发，避免外部绕过状态规则。
+Promise 实现了状态控制器、状态机、回调队列的 **封装**。只有在 Promise 内部启动异步任务，才能保证任务完成的通知只通过受控的 `resolve/reject` 触发，**避免外部绕过状态规则**。
 {% endnote %}
 
 {% note warning %}
-`resolve` 和 `reject` 不是原型方法。它是构造函数内部的闭包函数，只允许执行器调用，**不对外暴露**。
+`resolve` 和 `reject` 不是原型方法。它是构造函数内部的闭包函数，**只允许执行器调用**，不对外暴露。
 {% endnote %}
 
 构造函数需要 **初始化属性**，并执行 `executor` 方法 **启动异步任务**：
@@ -283,11 +283,11 @@ const resolve = function (value) {
 
 ### 回调注册
 
-`then()` 注册异步任务结束后的回调。注册时异步任务未结束则加入回调数组，已结束则立刻执行。
+`then()` 用于注册异步任务结束后的回调。注册时异步任务未结束则 **加入回调数组**，已结束则 **立刻执行**。
 
 为了实现链式调用，代码中固定返回一个新的 Promise：
 
-1. 如果用户在 `onFulfilled / onRejected` 中已经返回了一个 Promise，就让新创建的实例和用户返回的 Promise 状态对齐（即 `state` 和 `result` 对齐）；
+1. 如果用户在 `onFulfilled / onRejected` 中已经返回了一个 Promise，就让新创建的实例和用户返回的 Promise **状态对齐**（即 `state` 和 `result` 对齐）；
 2. 如果用户在 `onFulfilled / onRejected` 中返回了普通值，就把它包装成 `fulfilled` 状态的 Promise，触发下一层的 `onFulfilled` 回调。
 
 {% note info %}
@@ -393,7 +393,7 @@ ES6 Promise 是 **Promises/A+** 规范的一个 **具体实现**，它额外扩�
 **Promises/A+** 规范是一个 **核心标准**，它只规定了 `then` 方法应该如何工作，其他所有方法都是 ES6 中基于 `then` 构建的便捷方法。
 {% endnote %}
 
-**catch**
+{% label catch blue %}
 本质就是 `then(null, onRejected)` 的一个别名，专门用于处理 `rejected` 状态。
 
 ```javascript
@@ -402,10 +402,10 @@ ES6 Promise 是 **Promises/A+** 规范的一个 **具体实现**，它额外扩�
   }
 ```
 
-**static resolve**
+{% label Promise.resolve orange %}
 **将任意变量统一转换成 Promise 对象。**
 
-返回一个 `fulfilled` 状态的 Promise 对象；如果 `Promise.resolve` 的参数是一个 Promise 实例（无论是 `fulfilled / rejected / pending`），直接原样返回。
+返回一个 `fulfilled` 状态的 Promise 对象；如果 `Promise.resolve` 的参数是一个 Promise 实例（无论状态是 `fulfilled / rejected / pending`），直接原样返回。
 
 ```javascript
   static resolve(value) {
@@ -416,7 +416,7 @@ ES6 Promise 是 **Promises/A+** 规范的一个 **具体实现**，它额外扩�
   }
 ```
 
-**static reject**
+{% label Promise.reject green %}
 **创建一个新的 `rejected` 状态的 Promise 对象。**
 
 ```javascript
@@ -427,7 +427,7 @@ ES6 Promise 是 **Promises/A+** 规范的一个 **具体实现**，它额外扩�
   }
 ```
 
-**finally**
+{% label finally red %}
 **无论异步操作结果如何，都需要执行的操作。**
 
 实现思路是创建一个 **Promise 中间层** 处理 `callback`，但是不使用它的 `result`，而是传递上一层的 `result`。如果 `callback` 返回一个 Promise，可以直接用它作为中间层，否则创建一个 Promise 中间层：
@@ -463,7 +463,7 @@ ES6 Promise 是 **Promises/A+** 规范的一个 **具体实现**，它额外扩�
 当 `cb()` 抛出异常时，实际上是被 `return this.then(...)` 中的 `try catch` 捕获的。
 {% endnote %}
 
-**static all**
+{% label Promise.all pink %}
 **传入一个 可迭代对象，返回一个 Promise 对象。**
 
 1. 可迭代对象中所有的 Promise 都变为 `fulfilled` 状态时，返回的 Promise 变为 `fulfilled`，它的 `value` 是一个数组，对应传入的可迭代对象的 `value`（**按照传入顺序而非完成顺序**）；
@@ -590,7 +590,7 @@ const arrayLike = {
 
 {% endhideToggle %}
 
-**static race**
+{% label Promise.race purple %}
 **传入一个 可迭代对象，返回一个 Promise 对象。**
 返回的 Promise 的最终状态与结果会 **对齐** 可迭代对象中第一个落定的 Promise。
 
@@ -769,7 +769,7 @@ class MyPromise {
 
 `async/await` 是 ES8 引入的 **语法糖**，作用是把异步逻辑写得和同步代码一样直观。
 
-{% note info %}
+{% note success %}
 `async/await` 是 JS 异步编程的 **主流方案**，所有需要处理异步逻辑的场景都优先用它实现。
 {% endnote %}
 
@@ -785,7 +785,7 @@ class MyPromise {
 - `await` 后面一般跟 Promise 对象，作用是暂停当前 `async` 函数的执行，等待状态变更为 `fulfilled` 后，再继续执行后面的代码；
 - `await` 的返回值就是 Promise 成功的结果；如果状态变为 `rejected`，会 **抛出错误**，需要外层用 `try/catch` 捕获。
 
-{% note warning no-icon %}
+{% note primary no-icon %}
 如果多个异步任务 **没有依赖关系**，不要串行调用 `await`，应该先用 `Promise.all()` **并行发起所有请求**，再统一 `await` 结果：
 
 ```javascript
