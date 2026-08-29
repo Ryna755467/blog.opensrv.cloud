@@ -11,7 +11,7 @@
 
 nav:
   # Navigation bar logo image
-  logo:
+  logo: /img/favicon.svg
   display_title: true
   display_post_title: true
   # Whether to fix navigation bar
@@ -23,9 +23,7 @@ menu:
   分类: /categories/ || fas fa-folder-open
   标签: /tags/ || fas fa-tags
   文档 || fas fa-book:
-    使用文档: /docs/ || fas fa-book-open
-    主题配置: /docs/themeConfig/ || fas fa-cog
-    标签插件: /docs/tagPlugins/ || fas fa-puzzle-piece
+    写作规范: /docs/ || fas fa-pen-nib
 
 # --------------------------------------
 # Code Blocks Settings
@@ -57,7 +55,7 @@ social:
 # Image Settings
 # --------------------------------------
 
-favicon: /img/favicon.png
+favicon: /img/favicon.svg
 
 avatar:
   img: /img/avatar.jpg
@@ -105,7 +103,7 @@ cover:
   aside_enable: true
   archives_enable: true
   # When cover is not set, the default cover is displayed
-  default_cover: /img/default_cover.jpg
+  default_cover: /img/covers/default.jpg
 
 # Replace Broken Images
 error_img:
