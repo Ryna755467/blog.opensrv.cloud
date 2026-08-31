@@ -2,7 +2,7 @@
 title: 写作规范
 date: 2026-05-12
 updated: 2026-08-28
-top_img: /img/index.jpg
+top_img: /img/series/default.jpg
 ---
 
 ## 基本规则

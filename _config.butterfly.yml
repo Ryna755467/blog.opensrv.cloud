@@ -71,7 +71,7 @@ default_top_img:
 index_img: /img/index.jpg
 
 # The banner image of archive page
-archive_img: /img/index.jpg
+archive_img: /img/series/default.jpg
 
 # Note: tag page, not tags page
 tag_img:
