@@ -3,7 +3,7 @@ title: 垃圾回收
 date: 2026-08-03
 updated: 2026-08-03
 top_img: /img/series/javascript.jpg
-cover: /img/covers/garbage-collection.png
+cover: /img/covers/javascript/garbage-collection.png
 series: javascript
 categories:
   - JavaScript

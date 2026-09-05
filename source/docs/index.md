@@ -2,7 +2,7 @@
 title: 写作规范
 date: 2026-05-12
 updated: 2026-08-28
-top_img: /img/index.jpg
+top_img: /img/series/default.jpg
 ---
 
 ## 基本规则
@@ -115,6 +115,28 @@ I just love **bold text**.
 **使用场景**
 
 为了更好的渲染效果，避免在 **站点内的文档** 中使用 `>` 引用，用 `{% note %}` **标签外挂** 代替。
+
+### 图片
+
+**MD 语法**
+
+```markdown
+![默认封面](/img/covers/default.jpg)
+```
+
+**渲染效果**
+
+![默认封面](/img/covers/default.jpg)
+
+**使用场景**
+
+用于在页面中插入一张 **通栏图片**，例如：
+
+![首屏大图](/img/index.jpg)
+
+**注意事项**
+
+`{% image %}` 标签也可以插入通栏图片，例如：`{% image /img/covers/default.jpg 默认封面 %}`，但是 `![]()` 语法有 **更合适的上下间距**，因此所有通栏图片都要使用 `![]()` 语法。
 
 ### 链接
 
@@ -503,6 +525,13 @@ Markdown 应用程序使用一种称为 **Markdown 处理器**（也通常称为
    `entries()` 返回的对象同时满足 **迭代器** 和 **可迭代对象** 的定义，既实现了 `next` 方法，又实现了 `Symbol.iterator` 方法（**返回它自身**），因此它可以被 `for...of` 遍历。
    {% endnote %}
 
+5. 用于举例说明，例如：
+   选择排序是 **不稳定排序**，因为远距离交换可能改变相等元素的相对顺序。
+   {% note modern no-icon %}
+   数组 `[2ₐ, 2ᵦ, 1]`，第一轮找到最小值 `1`，和第一个 `2ₐ` 交换，数组变成 `[1,2ᵦ,2ₐ]`。
+   原本 `2ₐ` 在 `2ᵦ` 前面，交换后反过来，相等元素的相对顺序改变。
+   {% endnote %}
+
 **注意事项**
 
 1. 属于正文的内容不要使用 `{% note %}` 标签。
@@ -726,6 +755,64 @@ Object.entries(obj).forEach(([key, value]) => {
 ```
 
 {% endnote %}
+
+### Gallery
+
+**MD 语法**
+
+```markdown
+{% gallery %}
+![](/img/covers/javascript/iteration.png)
+![](/img/covers/javascript/closure.png)
+![](/img/covers/javascript/module.png)
+![](/img/covers/javascript/garbage-collection.png)
+![](/img/covers/javascript/promise.png)
+![](/img/covers/javascript/event-loop.png)
+{% endgallery %}
+```
+
+**渲染效果**
+
+{% gallery %}
+![](/img/covers/javascript/iteration.png)
+![](/img/covers/javascript/closure.png)
+![](/img/covers/javascript/module.png)
+![](/img/covers/javascript/garbage-collection.png)
+![](/img/covers/javascript/promise.png)
+![](/img/covers/javascript/event-loop.png)
+{% endgallery %}
+
+**使用场景**
+
+用于在页面中插入一个 **相册图库**，例如：
+
+{% gallery %}
+![](/img/captures/media-player/ch2-21.jpg)
+![](/img/captures/media-player/ch2-22.jpg)
+![](/img/captures/media-player/ch2-23.jpg)
+![](/img/captures/media-player/ch2-24.jpg)
+{% endgallery %}
+
+**注意事项**
+
+当图片数量超过 `10` 张时，必须设置 `{% gallery true %}` 开启 **加载更多** 按钮，例如：
+
+{% gallery true %}
+![](/img/captures/media-player/ch1-01.jpg)
+![](/img/captures/media-player/ch1-02.jpg)
+![](/img/captures/media-player/ch1-03.jpg)
+![](/img/captures/media-player/ch1-04.jpg)
+![](/img/captures/media-player/ch1-05.jpg)
+![](/img/captures/media-player/ch1-06.jpg)
+![](/img/captures/media-player/ch1-07.jpg)
+![](/img/captures/media-player/ch1-08.jpg)
+![](/img/captures/media-player/ch1-09.jpg)
+![](/img/captures/media-player/ch1-10.jpg)
+![](/img/captures/media-player/ch1-11.jpg)
+![](/img/captures/media-player/ch1-12.jpg)
+![](/img/captures/media-player/ch1-13.jpg)
+![](/img/captures/media-player/ch1-14.jpg)
+{% endgallery %}
 
 ### Hide Toggle
 

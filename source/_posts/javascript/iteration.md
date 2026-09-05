@@ -3,7 +3,7 @@ title: 遍历
 date: 2026-08-04
 updated: 2026-08-04
 top_img: /img/series/javascript.jpg
-cover: /img/covers/iteration.png
+cover: /img/covers/javascript/iteration.png
 series: javascript
 categories:
   - JavaScript

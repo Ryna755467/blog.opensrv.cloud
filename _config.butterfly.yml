@@ -23,7 +23,7 @@ menu:
   分类: /categories/ || fas fa-folder-open
   标签: /tags/ || fas fa-tags
   文档 || fas fa-book:
-    写作规范: /docs/ || fas fa-pen-nib
+    写作规范: /docs/ || fas fa-wand-magic-sparkles
 
 # --------------------------------------
 # Code Blocks Settings
@@ -71,7 +71,7 @@ default_top_img:
 index_img: /img/index.jpg
 
 # The banner image of archive page
-archive_img: /img/index.jpg
+archive_img: /img/series/default.jpg
 
 # Note: tag page, not tags page
 tag_img:
@@ -166,8 +166,10 @@ subtitle:
   source: false
   # If you close the typewriter effect, the subtitle will only show the first line of sub
   sub:
-    - Hi, there
-    - Are you ready for a new start?
+    - 风来疏竹，风过而竹不留声
+    - 雁度寒潭，雁去而潭不留影
+    - 宠辱不惊，看庭前花开花落
+    - 去留无意，望天上云卷云舒
 
 # Article layout on the homepage
 # 1: Cover on the left, info on the right
