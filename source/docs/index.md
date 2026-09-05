@@ -116,6 +116,28 @@ I just love **bold text**.
 
 为了更好的渲染效果，避免在 **站点内的文档** 中使用 `>` 引用，用 `{% note %}` **标签外挂** 代替。
 
+### 图片
+
+**MD 语法**
+
+```markdown
+![默认封面](/img/covers/default.jpg)
+```
+
+**渲染效果**
+
+![默认封面](/img/covers/default.jpg)
+
+**使用场景**
+
+用于在页面中插入一张 **通栏图片**，例如：
+
+![首屏大图](/img/index.jpg)
+
+**注意事项**
+
+`{% image %}` 标签也可以插入通栏图片，例如：`{% image /img/covers/default.jpg 默认封面 %}`，但是 `![]()` 语法有 **更合适的上下间距**，因此所有通栏图片都要使用 `![]()` 语法。
+
 ### 链接
 
 **MD 语法**
@@ -733,6 +755,64 @@ Object.entries(obj).forEach(([key, value]) => {
 ```
 
 {% endnote %}
+
+### Gallery
+
+**MD 语法**
+
+```markdown
+{% gallery %}
+![](/img/covers/javascript/iteration.png)
+![](/img/covers/javascript/closure.png)
+![](/img/covers/javascript/module.png)
+![](/img/covers/javascript/garbage-collection.png)
+![](/img/covers/javascript/promise.png)
+![](/img/covers/javascript/event-loop.png)
+{% endgallery %}
+```
+
+**渲染效果**
+
+{% gallery %}
+![](/img/covers/javascript/iteration.png)
+![](/img/covers/javascript/closure.png)
+![](/img/covers/javascript/module.png)
+![](/img/covers/javascript/garbage-collection.png)
+![](/img/covers/javascript/promise.png)
+![](/img/covers/javascript/event-loop.png)
+{% endgallery %}
+
+**使用场景**
+
+用于在页面中插入一个 **相册图库**，例如：
+
+{% gallery %}
+![](/img/captures/media-player/ch2-21.jpg)
+![](/img/captures/media-player/ch2-22.jpg)
+![](/img/captures/media-player/ch2-23.jpg)
+![](/img/captures/media-player/ch2-24.jpg)
+{% endgallery %}
+
+**注意事项**
+
+当图片数量超过 `10` 张时，必须设置 `{% gallery true %}` 开启 **加载更多** 按钮，例如：
+
+{% gallery true %}
+![](/img/captures/media-player/ch1-01.jpg)
+![](/img/captures/media-player/ch1-02.jpg)
+![](/img/captures/media-player/ch1-03.jpg)
+![](/img/captures/media-player/ch1-04.jpg)
+![](/img/captures/media-player/ch1-05.jpg)
+![](/img/captures/media-player/ch1-06.jpg)
+![](/img/captures/media-player/ch1-07.jpg)
+![](/img/captures/media-player/ch1-08.jpg)
+![](/img/captures/media-player/ch1-09.jpg)
+![](/img/captures/media-player/ch1-10.jpg)
+![](/img/captures/media-player/ch1-11.jpg)
+![](/img/captures/media-player/ch1-12.jpg)
+![](/img/captures/media-player/ch1-13.jpg)
+![](/img/captures/media-player/ch1-14.jpg)
+{% endgallery %}
 
 ### Hide Toggle
 
