@@ -1,7 +1,7 @@
 ---
 title: 媒体播放器
-date: 2026-06-01
-updated: 2026-06-01
+date: 2026-09-02
+updated: 2026-09-02
 top_img: /img/series/traces.jpg
 cover: /img/covers/traces/media-player.jpg
 series: traces
@@ -11,9 +11,11 @@ categories:
 
 ## 快速阅读
 
+记录大一暑假做过的一个媒体播放器软件。
+
 ### 功能概述
 
-这是一个媒体播放器，用于播放视频和音频，可以修改播放速度、显示歌词、修改轮播逻辑、切换主题、缩放页面。
+基于 JavaScript 和 Electron 实现的媒体播放器，用于播放视频和音频，可以修改播放速度、显示歌词、修改轮播逻辑、切换主题、缩放页面。
 
 **界面划分**
 
@@ -216,3 +218,7 @@ C语言做得比较差，用前端语言重写一次，反正也没什么新构�
 <!-- endtimeline -->
 
 {% endtimeline %}
+
+---
+
+{% series traces %}
