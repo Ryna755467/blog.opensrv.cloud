@@ -1,12 +1,12 @@
 ---
 title: 五子棋
-date: 2026-09-07
-updated: 2026-09-07
+date: 2026-08-06
+updated: 2026-08-06
 top_img: /img/series/traces.jpg
 cover: /img/covers/traces/gomoku.jpg
 series: traces
 categories:
-  - 程序设计
+  - 应用实例
 ---
 
 ## 快速阅读

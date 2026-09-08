@@ -1,7 +1,7 @@
 ---
 title: 排序算法
-date: 2026-08-15
-updated: 2026-08-15
+date: 2026-09-05
+updated: 2026-09-05
 top_img: /img/series/algorithm.jpg
 cover: /img/covers/algorithm/sorting.png
 series: algorithm

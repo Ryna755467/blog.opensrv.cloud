@@ -1,7 +1,7 @@
 ---
 title: 模块
-date: 2026-07-31
-updated: 2026-07-31
+date: 2026-07-03
+updated: 2026-07-03
 top_img: /img/series/javascript.jpg
 cover: /img/covers/javascript/module.png
 series: javascript

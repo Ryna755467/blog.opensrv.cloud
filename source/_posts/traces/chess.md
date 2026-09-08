@@ -1,12 +1,12 @@
 ---
 title: 国际象棋
-date: 2026-09-08
-updated: 2026-09-08
+date: 2026-08-07
+updated: 2026-08-07
 top_img: /img/series/traces.jpg
 cover: /img/covers/traces/chess.jpg
 series: traces
 categories:
-  - 程序设计
+  - 应用实例
 ---
 
 ## 快速阅读

@@ -1,7 +1,7 @@
 ---
 title: 事件循环
-date: 2026-08-02
-updated: 2026-08-02
+date: 2026-07-02
+updated: 2026-07-02
 top_img: /img/series/javascript.jpg
 cover: /img/covers/javascript/event-loop.png
 series: javascript
