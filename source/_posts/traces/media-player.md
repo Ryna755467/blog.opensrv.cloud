@@ -1,7 +1,7 @@
 ---
 title: 媒体播放器
-date: 2026-06-01
-updated: 2026-06-01
+date: 2026-09-02
+updated: 2026-09-02
 top_img: /img/series/traces.jpg
 cover: /img/covers/traces/media-player.jpg
 series: traces
@@ -10,6 +10,8 @@ categories:
 ---
 
 ## 快速阅读
+
+记录大一暑假做过的一个媒体播放器软件。
 
 ### 功能概述
 

@@ -1,7 +1,7 @@
 ---
 title: 音频播放器
-date: 2026-06-02
-updated: 2026-06-02
+date: 2026-09-01
+updated: 2026-09-01
 top_img: /img/series/traces.jpg
 cover: /img/covers/traces/audio-player.jpg
 series: traces
@@ -10,6 +10,8 @@ categories:
 ---
 
 ## 快速阅读
+
+记录大一寒假做过的一个音频播放器软件。
 
 ### 功能概述
 
