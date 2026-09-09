@@ -1,12 +1,12 @@
 ---
 title: 国际象棋
-date: 2026-09-08
-updated: 2026-09-08
+date: 2026-08-07
+updated: 2026-08-07
 top_img: /img/series/traces.jpg
 cover: /img/covers/traces/chess.jpg
 series: traces
 categories:
-  - 程序设计
+  - 应用实例
 ---
 
 ## 快速阅读
@@ -45,7 +45,7 @@ AI 需要在所有可行的走法中选择一个最合适的，是否是最合�
 
 **线程阻塞**
 
-`deepSearch` 函数在 JS 主线程内执行时，若 `depth` 较高（>=6 时），耗费的时间会比较长，在这段时间内页面无法渲染，动画无法执行，会造成明显的视觉卡顿。为了解决这个问题，可单独创建 worker 线程执行 `deepSearch` 函数，此时主线程不会被阻塞，页面会及时刷新，不会出现卡顿。Worker 线程的 `deepSearch` 函数执行完毕时通过 `postMessage` 方法向主线程发送数据（包括将要移动的棋子坐标和要移动的目标位置），主线程通过 `onmessage` 方法接收，然后执行 `AIset` 函数，移动目标棋子并更新 `chessBoard` 棋盘数组。
+`deepSearch` 函数在 JS 主线程内执行时，若 `depth` 较高（>=6 时），耗费的时间会比较长，在这段时间内页面无法渲染，动画无法执行，会造成明显的视觉卡顿。为了解决这个问题，可单独创建 Worker 线程执行 `deepSearch` 函数，此时主线程不会被阻塞，页面会及时刷新，不会出现卡顿。Worker 线程的 `deepSearch` 函数执行完毕时通过 `postMessage` 方法向主线程发送数据（包括将要移动的棋子坐标和要移动的目标位置），主线程通过 `onmessage` 方法接收，然后执行 `AIset` 函数，移动目标棋子并更新 `chessBoard` 棋盘数组。
 
 ### 运行效果
 
