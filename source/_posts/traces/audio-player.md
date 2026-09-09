@@ -1,12 +1,12 @@
 ---
 title: 音频播放器
-date: 2026-09-01
-updated: 2026-09-01
+date: 2026-08-03
+updated: 2026-08-03
 top_img: /img/series/traces.jpg
 cover: /img/covers/traces/audio-player.jpg
 series: traces
 categories:
-  - 程序设计
+  - 应用实例
 ---
 
 ## 快速阅读
