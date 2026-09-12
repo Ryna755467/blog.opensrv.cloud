@@ -803,7 +803,7 @@ sequenceDiagram
 
 ## 相关链接
 
-1. [Markdown Guide - 基础语法](https://www.markdownguide.org/basic-syntax/ "MD 基础语法")
-2. [Markdown Guide - 扩展语法](https://www.markdownguide.org/extended-syntax/ "MD 扩展语法")
-3. [Markdown Guide - 速查表](https://www.markdownguide.org/cheat-sheet/ "MD 速查表")
+1. [Markdown Guide - 速查表](https://www.markdownguide.org/cheat-sheet/ "MD 速查表")
+2. [Markdown Guide - 基本语法](https://www.markdownguide.org/basic-syntax/ "MD 基本语法")
+3. [Markdown Guide - 扩展语法](https://www.markdownguide.org/extended-syntax/ "MD 扩展语法")
 4. [Markdown CN - 中文文档](https://markdown.com.cn/ "Markdown 教程")
