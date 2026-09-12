@@ -48,8 +48,11 @@ code_blocks:
 # Formal:
 #   icon: link || the description || color
 social:
-  # fab fa-github: https://github.com/xxxxx || Github || '#24292e'
-  # fas fa-envelope: mailto:xxxxxx@gmail.com || Email || '#4a7dbe'
+  fab fa-qq: https://cdn.jsdelivr.net/gh/Ryna755467/static@main/qq-qrcode.jpg || QQ || '#12B7F5'
+  fab fa-weixin: https://cdn.jsdelivr.net/gh/Ryna755467/static@main/wechat-qrcode.jpg || 微信 || '#07c160'
+  fab fa-bilibili: https://space.bilibili.com/673969266 || BiliBili || '#ff6396'
+  fab fa-react: https://rinokit.opensrv.cloud/ || RinoKit || '#61DAFB'
+  fas fa-envelope: mailto:3243155507@qq.com || Email || '#4a7dbe'
 
 # --------------------------------------
 # Image Settings
