@@ -28,7 +28,8 @@ menu:
     游戏: /games/ || fas fa-gamepad
     音乐: /songs/ || fas fa-music
   文档 || fas fa-folder-open:
-    写作规范: /docs/ || fas fa-wand-magic-sparkles
+    写作规范: /docs/style/ || fas fa-wand-magic-sparkles
+    更新日志: /docs/changelog/ || fas fa-rectangle-list
 
 # --------------------------------------
 # Code Blocks Settings

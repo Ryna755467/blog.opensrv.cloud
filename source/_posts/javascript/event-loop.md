@@ -64,7 +64,7 @@ JS 采用 **非抢占式调度**，不允许中途打断正在执行的同步代
 
 早期的浏览器只有宏任务队列，事件循环的过程为：
 
-{% mermaid '{"themeVariables":{"fontSize":"15px"},"layout":"elk","look":"handDrawn"}' %}
+{% mermaid '{"themeVariables":{"fontSize":"15px"}}' %}
 sequenceDiagram
 participant JS主线程
 participant 宏任务队列
@@ -97,7 +97,7 @@ participant 浏览器渲染
 
 一次完整的事件循环包括：**取一个宏任务并执行 → 清空所有微任务 → 可能的 UI 渲染**。
 
-{% mermaid '{"themeVariables":{"fontSize":"15px"},"layout":"elk","look":"handDrawn"}' %}
+{% mermaid '{"themeVariables":{"fontSize":"15px"}}' %}
 sequenceDiagram
 participant JS主线程
 participant 宏任务队列
