@@ -1,7 +1,7 @@
 ---
 title: 写作规范
 date: 2026-06-01
-updated: 2026-09-10
+updated: 2026-09-14
 top_img: /img/series/default.jpg
 ---
 
@@ -762,24 +762,24 @@ Object.entries(obj).forEach(([key, value]) => {
 
 ```markdown
 {% gallery %}
-![](/img/covers/javascript/iteration.png)
-![](/img/covers/javascript/closure.png)
-![](/img/covers/javascript/module.png)
-![](/img/covers/javascript/garbage-collection.png)
-![](/img/covers/javascript/promise.png)
-![](/img/covers/javascript/event-loop.png)
+![](/img/covers/javascript/iteration.jpg)
+![](/img/covers/javascript/closure.jpg)
+![](/img/covers/javascript/module.jpg)
+![](/img/covers/javascript/garbage-collection.jpg)
+![](/img/covers/javascript/promise.jpg)
+![](/img/covers/javascript/event-loop.jpg)
 {% endgallery %}
 ```
 
 **渲染效果**
 
 {% gallery %}
-![](/img/covers/javascript/iteration.png)
-![](/img/covers/javascript/closure.png)
-![](/img/covers/javascript/module.png)
-![](/img/covers/javascript/garbage-collection.png)
-![](/img/covers/javascript/promise.png)
-![](/img/covers/javascript/event-loop.png)
+![](/img/covers/javascript/iteration.jpg)
+![](/img/covers/javascript/closure.jpg)
+![](/img/covers/javascript/module.jpg)
+![](/img/covers/javascript/garbage-collection.jpg)
+![](/img/covers/javascript/promise.jpg)
+![](/img/covers/javascript/event-loop.jpg)
 {% endgallery %}
 
 **使用场景**
@@ -920,6 +920,416 @@ const arrayLike = {
 **注意事项**
 
 如果内容区域较短，应该使用 `{% note %}` 标签展示。
+
+### Mermaid
+
+**MD 语法**
+
+```markdown
+{% mermaid '{"themeVariables":{"fontSize":"15px"}}' %}
+sequenceDiagram
+participant JS主线程
+participant 宏任务队列
+participant 微任务队列
+participant 浏览器渲染
+
+    loop 事件循环轮次
+        JS主线程->>宏任务队列: 取出一个宏任务
+        宏任务队列-->>JS主线程: 返回待执行任务
+        JS主线程->>JS主线程: 执行宏任务，调用栈运行
+        JS主线程->>微任务队列: 循环取出所有微任务
+        微任务队列-->>JS主线程: 全部执行完毕
+        JS主线程->>浏览器渲染: 执行页面渲染
+    end
+
+{% endmermaid %}
+```
+
+**渲染效果**
+
+{% mermaid '{"themeVariables":{"fontSize":"15px"}}' %}
+sequenceDiagram
+participant JS主线程
+participant 宏任务队列
+participant 微任务队列
+participant 浏览器渲染
+
+    loop 事件循环轮次
+        JS主线程->>宏任务队列: 取出一个宏任务
+        宏任务队列-->>JS主线程: 返回待执行任务
+        JS主线程->>JS主线程: 执行宏任务，调用栈运行
+        JS主线程->>微任务队列: 循环取出所有微任务
+        微任务队列-->>JS主线程: 全部执行完毕
+        JS主线程->>浏览器渲染: 执行页面渲染
+    end
+
+{% endmermaid %}
+
+**使用场景**
+
+1. 流程图 `Flowchart`：用于展示流程、算法或决策逻辑。
+
+```plaintext
+{% mermaid '{"themeVariables":{"fontSize":"15px"},"layout":"elk","look":"handDrawn"}' %}
+graph LR
+    A[提交表单] --> B{表单校验}
+    B -->|通过| C[保存数据]
+    B -->|不通过| D[返回错误提示]
+{% endmermaid %}
+```
+
+{% mermaid '{"themeVariables":{"fontSize":"15px"},"layout":"elk","look":"handDrawn"}' %}
+graph LR
+A[提交表单] --> B{表单校验}
+B -->|通过| C[保存数据]
+B -->|不通过| D[返回错误提示]
+{% endmermaid %}
+
+2. 时序图 `Sequence Diagram`：用于展示对象之间有序的交互过程，适合描述 API 调用或系统间消息传递。
+
+```markdown
+{% mermaid '{"themeVariables":{"fontSize":"15px"}}' %}
+sequenceDiagram
+participant User as 用户
+participant Front as 前端
+participant Back as 后端
+participant DB as 数据库
+
+    User->>Front: 提交登录表单
+    Front->>Back: POST /api/login
+    Back->>DB: 查询用户信息
+    DB-->>Back: 返回账号数据
+    Back-->>Front: 返回Token
+    Front-->>User: 登录成功，跳转主页
+
+{% endmermaid %}
+```
+
+{% mermaid '{"themeVariables":{"fontSize":"15px"}}' %}
+sequenceDiagram
+participant User as 用户
+participant Front as 前端
+participant Back as 后端
+participant DB as 数据库
+
+    User->>Front: 提交登录表单
+    Front->>Back: POST /api/login
+    Back->>DB: 查询用户信息
+    DB-->>Back: 返回账号数据
+    Back-->>Front: 返回Token
+    Front-->>User: 登录成功，跳转主页
+
+{% endmermaid %}
+
+{% note warning %}
+`layout` 对时序图无效，时序图有固定的布局引擎，该配置会被忽略。
+{% endnote %}
+
+{% note warning %}
+`look: handDrawn` 对时序图无效，时序图不支持手绘抖动线条，该配置会被忽略。
+{% endnote %}
+
+3. 类图 `Class Diagram`：用于描述系统中的类、属性、方法以及类之间的关系。
+
+```plaintext
+{% mermaid '{"themeVariables":{"fontSize":"15px"},"layout":"elk","look":"handDrawn"}' %}
+classDiagram
+    class BaseComponent {
+        +render()
+        +onMounted()
+    }
+    class Button {
+        +string label
+        +click()
+    }
+    class Input {
+        +string value
+        +onChange()
+    }
+    BaseComponent <|-- Button
+    BaseComponent <|-- Input
+{% endmermaid %}
+```
+
+{% mermaid '{"themeVariables":{"fontSize":"15px"},"layout":"elk","look":"handDrawn"}' %}
+classDiagram
+class BaseComponent {
++render()
++onMounted()
+}
+class Button {
++string label
++click()
+}
+class Input {
++string value
++onChange()
+}
+BaseComponent <|-- Button
+BaseComponent <|-- Input
+{% endmermaid %}
+
+4. 状态图 `State Diagram`：用于描述一个对象或系统在生命周期内所经历的状态转换。
+
+```plaintext
+{% mermaid '{"themeVariables":{"fontSize":"15px"},"look":"handDrawn"}' %}
+stateDiagram-v2
+    [*] --> 待提交
+    待提交 --> 审核中 : 提交申请
+    审核中 --> 通过 : 审核同意
+    审核中 --> 驳回 : 审核拒绝
+    通过 --> 已完成
+    驳回 --> 待提交 : 修改后重提
+    已完成 --> [*]
+{% endmermaid %}
+```
+
+{% mermaid '{"themeVariables":{"fontSize":"15px"},"look":"handDrawn"}' %}
+stateDiagram-v2
+[*] --> 待提交
+待提交 --> 审核中 : 提交申请
+审核中 --> 通过 : 审核同意
+审核中 --> 驳回 : 审核拒绝
+通过 --> 已完成
+驳回 --> 待提交 : 修改后重提
+已完成 --> [*]
+{% endmermaid %}
+
+{% note warning %}
+`stateDiagram-v2` 不支持 `layout` 参数，状态图有固定的布局引擎。
+{% endnote %}
+
+5. 甘特图 `Gantt`：用于项目管理，可以清晰地展示任务的时间安排、依赖关系和进度。
+
+```markdown
+{% mermaid '{"themeVariables":{"fontSize":"15px"},"look":"handDrawn"}' %}
+gantt
+title 项目迭代计划
+dateFormat YYYY-MM-DD
+section 开发
+需求分析 :done, des1, 2026-09-01, 3d
+编码开发 :active, dev1, 2026-09-04, 7d
+测试联调 :test1, 2026-09-11, 4d
+section 上线
+预发布验证 :pre, 2026-09-15, 2d
+正式发布 :rel, 2026-09-17, 1d
+{% endmermaid %}
+```
+
+{% mermaid '{"themeVariables":{"fontSize":"15px"},"look":"handDrawn"}' %}
+gantt
+title 项目迭代计划
+dateFormat YYYY-MM-DD
+section 开发
+需求分析 :done, des1, 2026-09-01, 3d
+编码开发 :active, dev1, 2026-09-04, 7d
+测试联调 :test1, 2026-09-11, 4d
+section 上线
+预发布验证 :pre, 2026-09-15, 2d
+正式发布 :rel, 2026-09-17, 1d
+{% endmermaid %}
+
+{% note warning %}
+甘特图有固定的布局引擎，不支持 `layout` 参数。
+{% endnote %}
+
+6. 饼图 `Pie`：用于展示数据的占比分布。
+
+```markdown
+{% mermaid '{"themeVariables":{"fontSize":"15px"},"look":"handDrawn"}' %}
+pie
+title 项目时间分配
+"编码开发" : 45
+"调试排错" : 25
+"文档编写" : 15
+"会议沟通" : 15
+{% endmermaid %}
+```
+
+{% mermaid '{"themeVariables":{"fontSize":"15px"},"look":"handDrawn"}' %}
+pie
+title 项目时间分配
+"编码开发" : 45
+"调试排错" : 25
+"文档编写" : 15
+"会议沟通" : 15
+{% endmermaid %}
+
+{% note warning %}
+饼图不支持 `layout` 参数。
+{% endnote %}
+
+7. ER 图 `erDiagram`：用于描述数据库实体、实体属性、实体之间的关联关系。
+
+```plaintext
+{% mermaid '{"themeVariables":{"fontSize":"15px"},"layout":"elk","look":"handDrawn"}' %}
+erDiagram
+    USER ||--o{ ARTICLE : 发表
+    USER {
+        int id PK
+        string username
+    }
+    ARTICLE {
+        int id PK
+        int user_id FK
+        string title
+    }
+{% endmermaid %}
+```
+
+{% mermaid '{"themeVariables":{"fontSize":"15px"},"layout":"elk","look":"handDrawn"}' %}
+erDiagram
+USER ||--o{ ARTICLE : 发表
+USER {
+int id PK
+string username
+}
+ARTICLE {
+int id PK
+int user_id FK
+string title
+}
+{% endmermaid %}
+
+8. 用户旅程图 `journey`：用于描述用户在产品里，从开始到结束的完整操作流程与情绪感受。
+
+```markdown
+{% mermaid '{"themeVariables":{"fontSize":"18px"},"look":"handDrawn"}' %}
+journey
+title 线上问题排查过程
+section 发现
+收到报错告警: 3
+section 定位
+查看日志: 6
+section 修复
+提交补丁: 8
+section 验证
+确认恢复:9
+{% endmermaid %}
+```
+
+{% mermaid '{"themeVariables":{"fontSize":"18px"},"look":"handDrawn"}' %}
+journey
+title 线上问题排查过程
+section 发现
+收到报错告警: 3
+section 定位
+查看日志: 6
+section 修复
+提交补丁: 8
+section 验证
+确认恢复:9
+{% endmermaid %}
+
+9. 时间线 `timeline`：用于展示按先后顺序发生的一系列事件，适合记录版本迭代、项目里程碑等。
+
+```markdown
+{% mermaid '{"themeVariables":{"fontSize":"18px"},"look":"handDrawn"}' %}
+timeline
+title 项目历程
+2026-01 : 需求分析
+2026-03 : 开发完成
+2026-05 : 测试验收
+2026-07 : 正式上线
+{% endmermaid %}
+```
+
+{% mermaid '{"themeVariables":{"fontSize":"18px"},"look":"handDrawn"}' %}
+timeline
+title 项目开发历程
+2026-01 : 需求分析
+2026-03 : 开发完成
+2026-05 : 测试验收
+2026-07 : 正式上线
+{% endmermaid %}
+
+**注意事项**
+
+`{% mermaid '[config]' %}` 写法中的 `[config]` 是一个 JSON 字符串，属于 Butterfly 主题标签外挂的扩展参数；而 `%%{init: {...}}%%` 写法属于 Mermaid 原生的前置指令语法。
+
+站点内的图表配置统一使用 Butterfly 标签参数写法。
+
+### Timeline
+
+**MD 语法**
+
+```markdown
+{% timeline 产品迭代时间线, purple %}
+
+<!-- timeline 2026-01-10 -->
+
+完成市场调研，编写需求文档，确定核心功能范围。
+
+<!-- endtimeline -->
+<!-- timeline 2026-02-15 -->
+
+进入开发阶段，搭建基础项目骨架，实现核心接口。
+
+<!-- endtimeline -->
+<!-- timeline 2026-03-20 -->
+
+前端页面开发完成，前后端开始联调，修复接口兼容性问题。
+
+<!-- endtimeline -->
+<!-- timeline 2026-04-08 -->
+
+内部测试，收集反馈，优化交互体验，修复 BUG。
+
+<!-- endtimeline -->
+<!-- timeline 2026-04-25 -->
+
+预发布环境验证，性能压测，准备上线文档。
+
+<!-- endtimeline -->
+<!-- timeline 2026-05-01 -->
+
+正式上线，开启灰度发布，持续监控线上指标。
+
+<!-- endtimeline -->
+
+{% endtimeline %}
+```
+
+**渲染效果**
+
+{% timeline 产品迭代时间线, purple %}
+
+<!-- timeline 2026-01-10 -->
+
+完成市场调研，编写需求文档，确定核心功能范围。
+
+<!-- endtimeline -->
+<!-- timeline 2026-02-15 -->
+
+进入开发阶段，搭建基础项目骨架，实现核心接口。
+
+<!-- endtimeline -->
+<!-- timeline 2026-03-20 -->
+
+前端页面开发完成，前后端开始联调，修复接口兼容性问题。
+
+<!-- endtimeline -->
+<!-- timeline 2026-04-08 -->
+
+内部测试，收集反馈，优化交互体验，修复 BUG。
+
+<!-- endtimeline -->
+<!-- timeline 2026-04-25 -->
+
+预发布环境验证，性能压测，准备上线文档。
+
+<!-- endtimeline -->
+<!-- timeline 2026-05-01 -->
+
+正式上线，开启灰度发布，持续监控线上指标。
+
+<!-- endtimeline -->
+
+{% endtimeline %}
+
+**使用场景**
+
+用于在文章内 **纵向展示** 事件里程碑。
 
 ### Series
 
