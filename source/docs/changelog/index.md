@@ -1,0 +1,96 @@
+---
+title: 更新日志
+date: 2026-06-01
+updated: 2026-09-14
+top_img: /img/series/default.jpg
+---
+
+{% timeline 变更记录, purple %}
+
+<!-- timeline v1.1.5 - refactor: 规范文档结构 -->
+
+- 规范文档增加 Mermaid、Timeline 标签外挂
+- 修改 docs 目录结构，文章访问路径统一使用文件夹模式
+- 图片资源统一存放在根目录 /img 文件夹，使用绝对路径引入
+
+<!-- endtimeline -->
+<!-- timeline v1.1.4 - feat: 新增 Giscus 评论 -->
+
+- 新增 Giscus 评论
+
+<!-- endtimeline -->
+<!-- timeline v1.1.3 - feat: 新增系统功能 -->
+
+- 新增顶部加载进度条
+- 新增文章字数统计功能
+- 新增文字左右对齐功能
+- 新增图片大图查看模式
+- 新增收藏页面列表
+- 新增本地搜索功能
+- 新增底部评论功能
+- 新增 404 页面
+
+<!-- endtimeline -->
+<!-- timeline v1.1.2 - fix: 修复静态资源浏览器缓存不更新问题 -->
+
+- 侧边栏增加社交图标
+- 静态资源 URL 增加 hash 查询参数
+- MD 参考文档
+
+<!-- endtimeline -->
+<!-- timeline v1.1.1 - feat: 应用实例相关文档 -->
+
+- 文章封面图调整
+- 应用实例相关文档
+- 侧边栏增加系列文章和最新文章卡片
+
+<!-- endtimeline -->
+<!-- timeline v1.1.0 - feat: 程序设计相关文档 -->
+
+- 目录结构调整
+- 程序设计相关文档
+
+<!-- endtimeline -->
+<!-- timeline v1.0.9 - feat: 算法原理与程序设计目录 -->
+
+- 算法原理相关文档
+- 程序设计相关文档
+- 规范文档补充内容
+
+<!-- endtimeline -->
+<!-- timeline v1.0.8 - fix: 补充内容 -->
+
+- 规范文档补充内容
+
+<!-- endtimeline -->
+<!-- timeline v1.0.6 - docs: 写作规范 -->
+
+- 新增写作规范
+
+<!-- endtimeline -->
+<!-- timeline v1.0.5 - feat: 目录结构调整 -->
+
+- 目录结构调整
+- 文档排版优化
+
+<!-- endtimeline -->
+<!-- timeline v1.0.4 - feat: JavaScript 相关文档 -->
+
+- 新增简/繁转换按钮
+- 新增页面锚点
+- JavaScript 相关文档
+
+<!-- endtimeline -->
+<!-- timeline v1.0.3 - feat: 主题配置 -->
+
+- Butterfly 相关主题配置
+- 新增数学公式和流程图渲染
+
+<!-- endtimeline -->
+<!-- timeline v1.0.2 - fix: 隐式依赖问题 -->
+
+- 包管理器替换为默认的 yarn
+
+<!-- endtimeline -->
+
+{% endtimeline %}

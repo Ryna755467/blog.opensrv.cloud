@@ -1,4 +1,4 @@
-公网链接 - [blog.opensrv.cloud](https://blog.opensrv.cloud/ "opensrv.cloud")
+公网链接 - <https://blog.opensrv.cloud>
 
 ### v1.0.2 - fix: 隐式依赖问题
 
@@ -65,3 +65,11 @@
 ### v1.1.4 - feat: 新增 Giscus 评论
 
 - 新增 Giscus 评论
+
+### v1.1.5 - refactor: 规范文档结构
+
+- 规范文档增加 Mermaid、Timeline 标签外挂
+- 修改 docs 目录结构，文章访问路径统一使用文件夹模式
+- 图片资源统一存放在根目录 /img 文件夹，使用绝对路径引入
+
+_v1.1.5 之后的更新日志已迁移到 /docs/ 目录_
