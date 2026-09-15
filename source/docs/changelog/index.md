@@ -38,27 +38,27 @@ top_img: /img/series/default.jpg
 - MD 参考文档
 
 <!-- endtimeline -->
-<!-- timeline v1.1.1 - feat: 应用实例相关文档 -->
+<!-- timeline v1.1.1 - feat: 新增系列文章和最新文章卡片 -->
 
 - 文章封面图调整
 - 应用实例相关文档
 - 侧边栏增加系列文章和最新文章卡片
 
 <!-- endtimeline -->
-<!-- timeline v1.1.0 - feat: 程序设计相关文档 -->
+<!-- timeline v1.1.0 - docs: 程序设计相关文档 -->
 
 - 目录结构调整
 - 程序设计相关文档
 
 <!-- endtimeline -->
-<!-- timeline v1.0.9 - feat: 算法原理与程序设计目录 -->
+<!-- timeline v1.0.9 - docs: 算法原理与程序设计文档 -->
 
 - 算法原理相关文档
 - 程序设计相关文档
 - 规范文档补充内容
 
 <!-- endtimeline -->
-<!-- timeline v1.0.8 - fix: 补充内容 -->
+<!-- timeline v1.0.8 - docs: 规范文档补充内容 -->
 
 - 规范文档补充内容
 
@@ -68,13 +68,13 @@ top_img: /img/series/default.jpg
 - 新增写作规范
 
 <!-- endtimeline -->
-<!-- timeline v1.0.5 - feat: 目录结构调整 -->
+<!-- timeline v1.0.5 - refactor: 目录结构调整 -->
 
 - 目录结构调整
 - 文档排版优化
 
 <!-- endtimeline -->
-<!-- timeline v1.0.4 - feat: JavaScript 相关文档 -->
+<!-- timeline v1.0.4 - docs: JavaScript 相关文档 -->
 
 - 新增简/繁转换按钮
 - 新增页面锚点
@@ -87,10 +87,38 @@ top_img: /img/series/default.jpg
 - 新增数学公式和流程图渲染
 
 <!-- endtimeline -->
-<!-- timeline v1.0.2 - fix: 隐式依赖问题 -->
+<!-- timeline v1.0.2 - fix: 修复隐式依赖问题 -->
 
 - 包管理器替换为默认的 yarn
 
 <!-- endtimeline -->
 
 {% endtimeline %}
+
+{% note info %}
+feat: 新增功能
+{% endnote %}
+
+{% note info %}
+docs: 新增文档
+{% endnote %}
+
+{% note warning %}
+fix: 修复 Bug
+{% endnote %}
+
+{% note warning %}
+refactor: 结构调整
+{% endnote %}
+
+{% note success %}
+perf: 性能优化
+{% endnote %}
+
+{% note success %}
+build: 系统构建
+{% endnote %}
+
+{% note default %}
+chore: 其他杂项
+{% endnote %}
