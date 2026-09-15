@@ -787,10 +787,10 @@ Object.entries(obj).forEach(([key, value]) => {
 用于在页面中插入一个 **相册图库**，例如：
 
 {% gallery %}
-![](/img/captures/media-player/ch2-21.jpg)
-![](/img/captures/media-player/ch2-22.jpg)
-![](/img/captures/media-player/ch2-23.jpg)
-![](/img/captures/media-player/ch2-24.jpg)
+![](/img/captures/application/media-player/ch2-21.jpg)
+![](/img/captures/application/media-player/ch2-22.jpg)
+![](/img/captures/application/media-player/ch2-23.jpg)
+![](/img/captures/application/media-player/ch2-24.jpg)
 {% endgallery %}
 
 **注意事项**
@@ -798,20 +798,20 @@ Object.entries(obj).forEach(([key, value]) => {
 当图片数量超过 `10` 张时，必须设置 `{% gallery true %}` 开启 **加载更多** 按钮，例如：
 
 {% gallery true %}
-![](/img/captures/media-player/ch1-01.jpg)
-![](/img/captures/media-player/ch1-02.jpg)
-![](/img/captures/media-player/ch1-03.jpg)
-![](/img/captures/media-player/ch1-04.jpg)
-![](/img/captures/media-player/ch1-05.jpg)
-![](/img/captures/media-player/ch1-06.jpg)
-![](/img/captures/media-player/ch1-07.jpg)
-![](/img/captures/media-player/ch1-08.jpg)
-![](/img/captures/media-player/ch1-09.jpg)
-![](/img/captures/media-player/ch1-10.jpg)
-![](/img/captures/media-player/ch1-11.jpg)
-![](/img/captures/media-player/ch1-12.jpg)
-![](/img/captures/media-player/ch1-13.jpg)
-![](/img/captures/media-player/ch1-14.jpg)
+![](/img/captures/application/media-player/ch1-01.jpg)
+![](/img/captures/application/media-player/ch1-02.jpg)
+![](/img/captures/application/media-player/ch1-03.jpg)
+![](/img/captures/application/media-player/ch1-04.jpg)
+![](/img/captures/application/media-player/ch1-05.jpg)
+![](/img/captures/application/media-player/ch1-06.jpg)
+![](/img/captures/application/media-player/ch1-07.jpg)
+![](/img/captures/application/media-player/ch1-08.jpg)
+![](/img/captures/application/media-player/ch1-09.jpg)
+![](/img/captures/application/media-player/ch1-10.jpg)
+![](/img/captures/application/media-player/ch1-11.jpg)
+![](/img/captures/application/media-player/ch1-12.jpg)
+![](/img/captures/application/media-player/ch1-13.jpg)
+![](/img/captures/application/media-player/ch1-14.jpg)
 {% endgallery %}
 
 ### Hide Toggle

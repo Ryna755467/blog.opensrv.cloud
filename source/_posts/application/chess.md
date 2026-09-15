@@ -2,9 +2,9 @@
 title: 国际象棋
 date: 2026-08-07
 updated: 2026-08-07
-top_img: /img/series/traces.jpg
-cover: /img/covers/traces/chess.jpg
-series: traces
+top_img: /img/series/application.jpg
+cover: /img/covers/application/chess.jpg
+series: application
 categories:
   - 应用实例
 ---
@@ -35,7 +35,7 @@ categories:
 
 最终生成树是这样的：
 
-![deepSearch 函数生成树](/img/captures/chess/ch1-01.jpg)
+![deepSearch 函数生成树](/img/captures/application/chess/ch1-01.jpg)
 
 不管 `depth` 值为多少，最终 AI 要选择的总是第一步的走法。无论 `depth` 是奇数还是偶数，只需要选择所有的叶子结点中价值最大的结点，并回溯到第一步的祖先节点，即为 AI 的最佳走法。
 
@@ -49,13 +49,13 @@ AI 需要在所有可行的走法中选择一个最合适的，是否是最合�
 
 ### 运行效果
 
-![玩家对战](/img/captures/chess/ch1-02.jpg)
-![棋子落点](/img/captures/chess/ch1-03.jpg)
-![人机对战](/img/captures/chess/ch1-04.jpg)
-![游戏结束](/img/captures/chess/ch1-05.jpg)
-![控制面板](/img/captures/chess/ch1-06.jpg)
-![难度调整](/img/captures/chess/ch1-07.jpg)
-![升变选择](/img/captures/chess/ch1-08.jpg)
+![玩家对战](/img/captures/application/chess/ch1-02.jpg)
+![棋子落点](/img/captures/application/chess/ch1-03.jpg)
+![人机对战](/img/captures/application/chess/ch1-04.jpg)
+![游戏结束](/img/captures/application/chess/ch1-05.jpg)
+![控制面板](/img/captures/application/chess/ch1-06.jpg)
+![难度调整](/img/captures/application/chess/ch1-07.jpg)
+![升变选择](/img/captures/application/chess/ch1-08.jpg)
 
 ## AI 算法
 
@@ -209,17 +209,17 @@ AI 需要在所有可行的走法中选择一个最合适的，是否是最合�
 有时 AI 会在同一个位置来回走子，原因是它的决策树中出现了多个评价值相同且最高叶子节点，由于程序顺序执行的原因导致 AI 总是选择这些叶子结点中的第一个，可以修改决策策略，使其在所有评价值最高的叶子结点中随机选择一个，就能避免此类问题。
 
 {% gallery %}
-![](/img/captures/chess/ch3-01.jpg)
-![](/img/captures/chess/ch3-02.jpg)
-![](/img/captures/chess/ch3-03.jpg)
-![](/img/captures/chess/ch3-04.jpg)
-![](/img/captures/chess/ch3-05.jpg)
-![](/img/captures/chess/ch3-06.jpg)
-![](/img/captures/chess/ch3-07.jpg)
-![](/img/captures/chess/ch3-08.jpg)
-![](/img/captures/chess/ch3-09.jpg)
+![](/img/captures/application/chess/ch3-01.jpg)
+![](/img/captures/application/chess/ch3-02.jpg)
+![](/img/captures/application/chess/ch3-03.jpg)
+![](/img/captures/application/chess/ch3-04.jpg)
+![](/img/captures/application/chess/ch3-05.jpg)
+![](/img/captures/application/chess/ch3-06.jpg)
+![](/img/captures/application/chess/ch3-07.jpg)
+![](/img/captures/application/chess/ch3-08.jpg)
+![](/img/captures/application/chess/ch3-09.jpg)
 {% endgallery %}
 
 ---
 
-{% series traces %}
+{% series application %}
