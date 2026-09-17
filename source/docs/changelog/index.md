@@ -7,6 +7,14 @@ top_img: /img/series/default.jpg
 
 {% timeline 变更记录, purple %}
 
+<!-- timeline v1.1.6 -  docs: 更新日志增加提交前缀规范 -->
+
+- 理科散文相关文档
+- MD 参考文档增加 Mermaid 图表示例
+- 更新日志增加提交前缀规范
+- 目录结构调整
+
+<!-- endtimeline -->
 <!-- timeline v1.1.5 - refactor: 规范文档结构 -->
 
 - 规范文档增加 Mermaid、Timeline 标签外挂
