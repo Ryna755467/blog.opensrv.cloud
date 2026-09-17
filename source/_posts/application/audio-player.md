@@ -2,9 +2,9 @@
 title: 音频播放器
 date: 2026-08-03
 updated: 2026-08-03
-top_img: /img/series/traces.jpg
-cover: /img/covers/traces/audio-player.jpg
-series: traces
+top_img: /img/series/application.jpg
+cover: /img/covers/application/audio-player.jpg
+series: application
 categories:
   - 应用实例
 ---
@@ -34,12 +34,12 @@ categories:
 
 ### 运行效果
 
-![检索面板](/img/captures/audio-player/ch1-01.jpg)
-![播放模式](/img/captures/audio-player/ch1-02.jpg)
-![更新记录](/img/captures/audio-player/ch1-03.jpg)
-![系列页面](/img/captures/audio-player/ch1-04.jpg)
-![主页面](/img/captures/audio-player/ch1-05.jpg)
-![自定义条目](/img/captures/audio-player/ch1-06.jpg)
+![检索面板](/img/captures/application/audio-player/ch1-01.jpg)
+![播放模式](/img/captures/application/audio-player/ch1-02.jpg)
+![更新记录](/img/captures/application/audio-player/ch1-03.jpg)
+![系列页面](/img/captures/application/audio-player/ch1-04.jpg)
+![主页面](/img/captures/application/audio-player/ch1-05.jpg)
+![自定义条目](/img/captures/application/audio-player/ch1-06.jpg)
 
 ## 实现过程
 
@@ -50,7 +50,7 @@ categories:
 一个基于图形库的音频播放器，看看多久可以做完...
 
 {% gallery %}
-![](/img/captures/audio-player/ch2-01.jpg)
+![](/img/captures/application/audio-player/ch2-01.jpg)
 {% endgallery %}
 
 <!-- endtimeline -->
@@ -61,8 +61,8 @@ categories:
 两天时间，分别去做局部滚动栏和mtv，结果是都没有解决emmm...
 
 {% gallery %}
-![](/img/captures/audio-player/ch2-02.jpg)
-![](/img/captures/audio-player/ch2-03.jpg)
+![](/img/captures/application/audio-player/ch2-02.jpg)
+![](/img/captures/application/audio-player/ch2-03.jpg)
 {% endgallery %}
 
 <!-- endtimeline -->
@@ -76,8 +76,8 @@ categories:
 只需要调整一下绘图顺序，简单说就是先全局绘图，然后用背景色绘制一个填充矩形来覆盖需要隐藏的部分，接下来再一个模块一个模块开始绘制，这样视觉上就达到了局部动画的效果，被掩码误导了几天...
 
 {% gallery %}
-![](/img/captures/audio-player/ch2-04.jpg)
-![](/img/captures/audio-player/ch2-05.jpg)
+![](/img/captures/application/audio-player/ch2-04.jpg)
+![](/img/captures/application/audio-player/ch2-05.jpg)
 {% endgallery %}
 
 <!-- endtimeline -->
@@ -87,8 +87,8 @@ categories:
 滚动条部分，总算是解决了...
 
 {% gallery %}
-![](/img/captures/audio-player/ch2-06.jpg)
-![](/img/captures/audio-player/ch2-07.jpg)
+![](/img/captures/application/audio-player/ch2-06.jpg)
+![](/img/captures/application/audio-player/ch2-07.jpg)
 {% endgallery %}
 
 <!-- endtimeline -->
@@ -98,8 +98,8 @@ categories:
 播放模式与历史记录
 
 {% gallery %}
-![](/img/captures/audio-player/ch2-08.jpg)
-![](/img/captures/audio-player/ch2-09.jpg)
+![](/img/captures/application/audio-player/ch2-08.jpg)
+![](/img/captures/application/audio-player/ch2-09.jpg)
 {% endgallery %}
 
 <!-- endtimeline -->
@@ -117,15 +117,15 @@ categories:
 还有像以按键弹起为信号的结果被无限次执行等好多bug，都已经修正了。
 
 {% gallery %}
-![](/img/captures/audio-player/ch2-10.png)
-![](/img/captures/audio-player/ch2-11.png)
-![](/img/captures/audio-player/ch2-12.jpg)
-![](/img/captures/audio-player/ch2-13.jpg)
-![](/img/captures/audio-player/ch2-14.jpg)
-![](/img/captures/audio-player/ch2-15.jpg)
-![](/img/captures/audio-player/ch2-16.jpg)
-![](/img/captures/audio-player/ch2-17.jpg)
-![](/img/captures/audio-player/ch2-18.jpg)
+![](/img/captures/application/audio-player/ch2-10.png)
+![](/img/captures/application/audio-player/ch2-11.png)
+![](/img/captures/application/audio-player/ch2-12.jpg)
+![](/img/captures/application/audio-player/ch2-13.jpg)
+![](/img/captures/application/audio-player/ch2-14.jpg)
+![](/img/captures/application/audio-player/ch2-15.jpg)
+![](/img/captures/application/audio-player/ch2-16.jpg)
+![](/img/captures/application/audio-player/ch2-17.jpg)
+![](/img/captures/application/audio-player/ch2-18.jpg)
 {% endgallery %}
 
 <!-- endtimeline -->
@@ -159,4 +159,4 @@ categories:
 
 ---
 
-{% series traces %}
+{% series application %}

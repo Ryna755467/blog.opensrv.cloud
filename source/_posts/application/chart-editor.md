@@ -2,9 +2,9 @@
 title: 图表编辑器
 date: 2026-08-05
 updated: 2026-08-05
-top_img: /img/series/traces.jpg
-cover: /img/covers/traces/chart-editor.jpg
-series: traces
+top_img: /img/series/application.jpg
+cover: /img/covers/application/chart-editor.jpg
+series: application
 categories:
   - 应用实例
 ---
@@ -31,13 +31,13 @@ categories:
 
 ### 运行效果
 
-![主界面-柱状图](/img/captures/chart-editor/ch1-01.jpg)
-![配置项-堆叠面积图通用配置](/img/captures/chart-editor/ch1-02.jpg)
-![配置项-堆叠面积图数据系列](/img/captures/chart-editor/ch1-03.jpg)
-![编码预览-堆叠面积图](/img/captures/chart-editor/ch1-04.jpg)
-![生成图表-堆叠面积图折线图类型](/img/captures/chart-editor/ch1-05.jpg)
-![生成图表-堆叠面积图柱状图类型](/img/captures/chart-editor/ch1-06.jpg)
+![主界面-柱状图](/img/captures/application/chart-editor/ch1-01.jpg)
+![配置项-堆叠面积图通用配置](/img/captures/application/chart-editor/ch1-02.jpg)
+![配置项-堆叠面积图数据系列](/img/captures/application/chart-editor/ch1-03.jpg)
+![编码预览-堆叠面积图](/img/captures/application/chart-editor/ch1-04.jpg)
+![生成图表-堆叠面积图折线图类型](/img/captures/application/chart-editor/ch1-05.jpg)
+![生成图表-堆叠面积图柱状图类型](/img/captures/application/chart-editor/ch1-06.jpg)
 
 ---
 
-{% series traces %}
+{% series application %}

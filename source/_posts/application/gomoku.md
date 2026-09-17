@@ -2,9 +2,9 @@
 title: 五子棋
 date: 2026-08-06
 updated: 2026-08-06
-top_img: /img/series/traces.jpg
-cover: /img/covers/traces/gomoku.jpg
-series: traces
+top_img: /img/series/application.jpg
+cover: /img/covers/application/gomoku.jpg
+series: application
 categories:
   - 应用实例
 ---
@@ -51,9 +51,9 @@ Player2 对应的控制按键为：小键盘 `0` `1` `2` `3` `4` `5` `6` `7` `8`
 
 ### 运行效果
 
-![定位线条](/img/captures/gomoku/ch1-01.jpg)
-![信息提示](/img/captures/gomoku/ch1-02.jpg)
+![定位线条](/img/captures/application/gomoku/ch1-01.jpg)
+![信息提示](/img/captures/application/gomoku/ch1-02.jpg)
 
 ---
 
-{% series traces %}
+{% series application %}

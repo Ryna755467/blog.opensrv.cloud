@@ -2,9 +2,9 @@
 title: 虚拟桌面
 date: 2026-08-02
 updated: 2026-08-02
-top_img: /img/series/traces.jpg
-cover: /img/covers/traces/virtual-desktop.jpg
-series: traces
+top_img: /img/series/application.jpg
+cover: /img/covers/application/virtual-desktop.jpg
+series: application
 categories:
   - 应用实例
 ---
@@ -32,12 +32,12 @@ Swing 提供的控件有些情况不符合预期效果，部分区域（例如�
 
 ### 运行效果
 
-![便笺-打开文件功能](/img/captures/virtual-desktop/ch1-01.jpg)
-![便笺-顶部导航栏](/img/captures/virtual-desktop/ch1-02.jpg)
-![便笺-右键菜单栏](/img/captures/virtual-desktop/ch1-03.jpg)
-![桌面-修改壁纸功能](/img/captures/virtual-desktop/ch1-04.jpg)
-![桌面-控制功能](/img/captures/virtual-desktop/ch1-05.jpg)
+![便笺-打开文件功能](/img/captures/application/virtual-desktop/ch1-01.jpg)
+![便笺-顶部导航栏](/img/captures/application/virtual-desktop/ch1-02.jpg)
+![便笺-右键菜单栏](/img/captures/application/virtual-desktop/ch1-03.jpg)
+![桌面-修改壁纸功能](/img/captures/application/virtual-desktop/ch1-04.jpg)
+![桌面-控制功能](/img/captures/application/virtual-desktop/ch1-05.jpg)
 
 ---
 
-{% series traces %}
+{% series application %}

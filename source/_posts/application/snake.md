@@ -2,9 +2,9 @@
 title: 贪吃蛇
 date: 2026-08-01
 updated: 2026-08-01
-top_img: /img/series/traces.jpg
-cover: /img/covers/traces/snake.jpg
-series: traces
+top_img: /img/series/application.jpg
+cover: /img/covers/application/snake.jpg
+series: application
 categories:
   - 应用实例
 ---
@@ -34,9 +34,9 @@ categories:
 
 ### 运行效果
 
-![初始界面](/img/captures/snake/ch1-01.jpg)
-![规则界面](/img/captures/snake/ch1-02.jpg)
-![游戏界面](/img/captures/snake/ch1-03.jpg)
+![初始界面](/img/captures/application/snake/ch1-01.jpg)
+![规则界面](/img/captures/application/snake/ch1-02.jpg)
+![游戏界面](/img/captures/application/snake/ch1-03.jpg)
 
 ## 备注信息
 
@@ -60,4 +60,4 @@ categories:
 
 ---
 
-{% series traces %}
+{% series application %}
