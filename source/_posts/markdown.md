@@ -1,7 +1,7 @@
 ---
 title: MD 参考文档
 date: 2026-09-10
-updated: 2026-09-10
+updated: 2026-09-15
 top_img: /img/series/markdown.jpg
 cover: /img/covers/markdown.jpg
 tags:
@@ -744,7 +744,7 @@ graph LR
 ```
 ````
 
-流程图：用 `graph` 声明方向，`-->` 表示箭头。
+流程图：用 `graph` 声明。
 
 ````markdown
 ```mermaid
@@ -770,6 +770,95 @@ sequenceDiagram
     B-->>A: 返回响应
 ```
 ````
+
+{% note info %}
+`->>` 实线表示请求，`-->>` 虚线表示响应；`participant` 定义参与者，`as` 起别名。
+{% endnote %}
+
+类图：用 `classDiagram` 声明。
+
+````markdown
+```mermaid
+classDiagram
+    class Course {
+        +String title
+        +float price
+        +enroll()
+    }
+    class Student {
+        +String name
+        +learn()
+    }
+    class Teacher {
+        +String name
+        +createCourse()
+    }
+    Teacher "1" --> "*" Course : 创建
+    Student "*" --> "*" Course : 选课
+```
+````
+
+{% note info %}
+`class` 定义类，`+` 表示 `public`；`-->` 表示关联，`"1"` 和 `"*"` 表示多重性，两端组合可表达一对一、一对多、多对多。
+{% endnote %}
+
+状态图：用 `stateDiagram-v2` 声明。
+
+````markdown
+```mermaid
+stateDiagram-v2
+    [*] --> 待审核
+    待审核 --> 审核中: 提交审核
+    审核中 --> 已通过: 审核通过
+    审核中 --> 已驳回: 审核不通过
+    已驳回 --> 审核中: 修改后重新提交
+    已通过 --> 已发布: 上架
+    已发布 --> 已下架: 下架
+    已下架 --> 已发布: 重新上架
+    已下架 --> [*]
+```
+````
+
+{% note info %}
+`[*]` 表示开始 / 结束；`A --> B: <事件>` 表示状态转移，冒号后是触发条件。
+{% endnote %}
+
+甘特图：用 `gantt` 声明。
+
+````markdown
+```mermaid
+gantt
+    title 项目开发计划
+    dateFormat  YYYY-MM-DD
+    section 设计
+    需求分析 :a1, 2026-09-01, 7d
+    原型设计 :after a1, 5d
+    section 开发
+    前端开发 :2026-09-13, 10d
+    后端开发 :2026-09-13, 12d
+```
+````
+
+{% note info %}
+`title` 标题，`dateFormat` 日期格式，`section` 分组；任务格式为 `<名称> :id, <开始日期>, <持续时长>`，`after a1` 表示接在 `a1` 之后。
+{% endnote %}
+
+饼图：用 `pie` 声明。
+
+````markdown
+```mermaid
+pie title Git Commit Type 占比
+    "feat" : 40
+    "fix" : 30
+    "refactor" : 15
+    "docs" : 10
+    "chore" : 5
+```
+````
+
+{% note info %}
+`pie` 声明饼图，`title` 标题；`"<名称>" : <数值>` 每行一个扇区，数值会自动换算为百分比。
+{% endnote %}
 
 {% note warning %}
 Mermaid 属于第三方扩展，需要编辑器或平台支持才能渲染，否则会原样显示为代码。
@@ -799,6 +888,67 @@ sequenceDiagram
     participant B as 服务器
     A->>B: 发送请求
     B-->>A: 返回响应
+```
+
+类图
+
+```mermaid
+classDiagram
+    class Course {
+        +String title
+        +float price
+        +enroll()
+    }
+    class Student {
+        +String name
+        +learn()
+    }
+    class Teacher {
+        +String name
+        +createCourse()
+    }
+    Teacher "1" --> "*" Course : 创建
+    Student "*" --> "*" Course : 选课
+```
+
+状态图
+
+```mermaid
+stateDiagram-v2
+    [*] --> 待审核
+    待审核 --> 审核中: 提交审核
+    审核中 --> 已通过: 审核通过
+    审核中 --> 已驳回: 审核不通过
+    已驳回 --> 审核中: 修改后重新提交
+    已通过 --> 已发布: 上架
+    已发布 --> 已下架: 下架
+    已下架 --> 已发布: 重新上架
+    已下架 --> [*]
+```
+
+甘特图
+
+```mermaid
+gantt
+    title 项目开发计划
+    dateFormat  YYYY-MM-DD
+    section 设计
+    需求分析 :a1, 2026-09-01, 7d
+    原型设计 :after a1, 5d
+    section 开发
+    前端开发 :2026-09-13, 10d
+    后端开发 :2026-09-13, 12d
+```
+
+饼图
+
+```mermaid
+pie title Git Commit Type 占比
+    "feat" : 40
+    "fix" : 30
+    "refactor" : 15
+    "docs" : 10
+    "chore" : 5
 ```
 
 ## 相关链接

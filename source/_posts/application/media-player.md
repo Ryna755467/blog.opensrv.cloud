@@ -2,9 +2,9 @@
 title: 媒体播放器
 date: 2026-08-04
 updated: 2026-08-04
-top_img: /img/series/traces.jpg
-cover: /img/covers/traces/media-player.jpg
-series: traces
+top_img: /img/series/application.jpg
+cover: /img/covers/application/media-player.jpg
+series: application
 categories:
   - 应用实例
 ---
@@ -51,20 +51,20 @@ categories:
 
 ### 运行效果
 
-![主界面](/img/captures/media-player/ch1-01.jpg)
-![检索面板](/img/captures/media-player/ch1-02.jpg)
-![倍速播放](/img/captures/media-player/ch1-03.jpg)
-![电影页面](/img/captures/media-player/ch1-04.jpg)
-![播放模式](/img/captures/media-player/ch1-05.jpg)
-![视频页面](/img/captures/media-player/ch1-06.jpg)
-![系列菜单](/img/captures/media-player/ch1-07.jpg)
-![音频页面](/img/captures/media-player/ch1-08.jpg)
-![自定义页面 - 视频栏目](/img/captures/media-player/ch1-09.jpg)
-![自定义页面 - 音频栏目](/img/captures/media-player/ch1-10.jpg)
-![画中画播放](/img/captures/media-player/ch1-11.jpg)
-![视频播放](/img/captures/media-player/ch1-12.jpg)
-![缩略图](/img/captures/media-player/ch1-13.jpg)
-![歌词面板](/img/captures/media-player/ch1-14.jpg)
+![主界面](/img/captures/application/media-player/ch1-01.jpg)
+![检索面板](/img/captures/application/media-player/ch1-02.jpg)
+![倍速播放](/img/captures/application/media-player/ch1-03.jpg)
+![电影页面](/img/captures/application/media-player/ch1-04.jpg)
+![播放模式](/img/captures/application/media-player/ch1-05.jpg)
+![视频页面](/img/captures/application/media-player/ch1-06.jpg)
+![系列菜单](/img/captures/application/media-player/ch1-07.jpg)
+![音频页面](/img/captures/application/media-player/ch1-08.jpg)
+![自定义页面 - 视频栏目](/img/captures/application/media-player/ch1-09.jpg)
+![自定义页面 - 音频栏目](/img/captures/application/media-player/ch1-10.jpg)
+![画中画播放](/img/captures/application/media-player/ch1-11.jpg)
+![视频播放](/img/captures/application/media-player/ch1-12.jpg)
+![缩略图](/img/captures/application/media-player/ch1-13.jpg)
+![歌词面板](/img/captures/application/media-player/ch1-14.jpg)
 
 ## 实现过程
 
@@ -75,8 +75,8 @@ categories:
 C语言做得比较差，用前端语言重写一次，反正也没什么新构思...
 
 {% gallery %}
-![](/img/captures/media-player/ch2-01.jpg)
-![](/img/captures/media-player/ch2-03.jpg)
+![](/img/captures/application/media-player/ch2-01.jpg)
+![](/img/captures/application/media-player/ch2-03.jpg)
 {% endgallery %}
 
 <!-- endtimeline -->
@@ -86,7 +86,7 @@ C语言做得比较差，用前端语言重写一次，反正也没什么新构�
 启动UI动画 + 布局：控制栏、词条、模式、主题 + 主栏、侧栏动态缩放
 
 {% gallery %}
-![](/img/captures/media-player/ch2-04.jpg)
+![](/img/captures/application/media-player/ch2-04.jpg)
 {% endgallery %}
 
 <!-- endtimeline -->
@@ -96,10 +96,10 @@ C语言做得比较差，用前端语言重写一次，反正也没什么新构�
 切换动画 + 分屏功能（一二三四分屏）
 
 {% gallery %}
-![](/img/captures/media-player/ch2-05.jpg)
-![](/img/captures/media-player/ch2-06.jpg)
-![](/img/captures/media-player/ch2-07.jpg)
-![](/img/captures/media-player/ch2-08.jpg)
+![](/img/captures/application/media-player/ch2-05.jpg)
+![](/img/captures/application/media-player/ch2-06.jpg)
+![](/img/captures/application/media-player/ch2-07.jpg)
+![](/img/captures/application/media-player/ch2-08.jpg)
 {% endgallery %}
 
 <!-- endtimeline -->
@@ -109,15 +109,15 @@ C语言做得比较差，用前端语言重写一次，反正也没什么新构�
 窗口缩放 + 画中画分屏
 
 {% gallery %}
-![](/img/captures/media-player/ch2-09.jpg)
-![](/img/captures/media-player/ch2-10.jpg)
-![](/img/captures/media-player/ch2-11.jpg)
-![](/img/captures/media-player/ch2-12.jpg)
-![](/img/captures/media-player/ch2-13.jpg)
-![](/img/captures/media-player/ch2-14.jpg)
-![](/img/captures/media-player/ch2-15.jpg)
-![](/img/captures/media-player/ch2-16.jpg)
-![](/img/captures/media-player/ch2-17.jpg)
+![](/img/captures/application/media-player/ch2-09.jpg)
+![](/img/captures/application/media-player/ch2-10.jpg)
+![](/img/captures/application/media-player/ch2-11.jpg)
+![](/img/captures/application/media-player/ch2-12.jpg)
+![](/img/captures/application/media-player/ch2-13.jpg)
+![](/img/captures/application/media-player/ch2-14.jpg)
+![](/img/captures/application/media-player/ch2-15.jpg)
+![](/img/captures/application/media-player/ch2-16.jpg)
+![](/img/captures/application/media-player/ch2-17.jpg)
 {% endgallery %}
 
 <!-- endtimeline -->
@@ -127,9 +127,9 @@ C语言做得比较差，用前端语言重写一次，反正也没什么新构�
 三天做了主体八分之一的六分之一…
 
 {% gallery %}
-![](/img/captures/media-player/ch2-18.jpg)
-![](/img/captures/media-player/ch2-19.jpg)
-![](/img/captures/media-player/ch2-20.jpg)
+![](/img/captures/application/media-player/ch2-18.jpg)
+![](/img/captures/application/media-player/ch2-19.jpg)
+![](/img/captures/application/media-player/ch2-20.jpg)
 {% endgallery %}
 
 <!-- endtimeline -->
@@ -139,10 +139,10 @@ C语言做得比较差，用前端语言重写一次，反正也没什么新构�
 背景图动态切换和四个主题
 
 {% gallery %}
-![](/img/captures/media-player/ch2-21.jpg)
-![](/img/captures/media-player/ch2-22.jpg)
-![](/img/captures/media-player/ch2-23.jpg)
-![](/img/captures/media-player/ch2-24.jpg)
+![](/img/captures/application/media-player/ch2-21.jpg)
+![](/img/captures/application/media-player/ch2-22.jpg)
+![](/img/captures/application/media-player/ch2-23.jpg)
+![](/img/captures/application/media-player/ch2-24.jpg)
 {% endgallery %}
 
 <!-- endtimeline -->
@@ -152,10 +152,10 @@ C语言做得比较差，用前端语言重写一次，反正也没什么新构�
 响应式布局
 
 {% gallery %}
-![](/img/captures/media-player/ch2-25.jpg)
-![](/img/captures/media-player/ch2-26.jpg)
-![](/img/captures/media-player/ch2-27.jpg)
-![](/img/captures/media-player/ch2-28.jpg)
+![](/img/captures/application/media-player/ch2-25.jpg)
+![](/img/captures/application/media-player/ch2-26.jpg)
+![](/img/captures/application/media-player/ch2-27.jpg)
+![](/img/captures/application/media-player/ch2-28.jpg)
 {% endgallery %}
 
 <!-- endtimeline -->
@@ -165,10 +165,10 @@ C语言做得比较差，用前端语言重写一次，反正也没什么新构�
 视频和音频栏
 
 {% gallery %}
-![](/img/captures/media-player/ch2-29.jpg)
-![](/img/captures/media-player/ch2-30.jpg)
-![](/img/captures/media-player/ch2-31.jpg)
-![](/img/captures/media-player/ch2-32.jpg)
+![](/img/captures/application/media-player/ch2-29.jpg)
+![](/img/captures/application/media-player/ch2-30.jpg)
+![](/img/captures/application/media-player/ch2-31.jpg)
+![](/img/captures/application/media-player/ch2-32.jpg)
 {% endgallery %}
 
 <!-- endtimeline -->
@@ -178,10 +178,10 @@ C语言做得比较差，用前端语言重写一次，反正也没什么新构�
 试着录了两首歌的歌词
 
 {% gallery %}
-![](/img/captures/media-player/ch2-33.jpg)
-![](/img/captures/media-player/ch2-34.jpg)
-![](/img/captures/media-player/ch2-35.jpg)
-![](/img/captures/media-player/ch2-36.jpg)
+![](/img/captures/application/media-player/ch2-33.jpg)
+![](/img/captures/application/media-player/ch2-34.jpg)
+![](/img/captures/application/media-player/ch2-35.jpg)
+![](/img/captures/application/media-player/ch2-36.jpg)
 {% endgallery %}
 
 <!-- endtimeline -->
@@ -191,10 +191,10 @@ C语言做得比较差，用前端语言重写一次，反正也没什么新构�
 播放速率、时间轴、搜索栏、自定义栏
 
 {% gallery %}
-![](/img/captures/media-player/ch2-37.jpg)
-![](/img/captures/media-player/ch2-38.jpg)
-![](/img/captures/media-player/ch2-39.jpg)
-![](/img/captures/media-player/ch2-40.jpg)
+![](/img/captures/application/media-player/ch2-37.jpg)
+![](/img/captures/application/media-player/ch2-38.jpg)
+![](/img/captures/application/media-player/ch2-39.jpg)
+![](/img/captures/application/media-player/ch2-40.jpg)
 {% endgallery %}
 
 <!-- endtimeline -->
@@ -204,15 +204,15 @@ C语言做得比较差，用前端语言重写一次，反正也没什么新构�
 终于做完了，动画效果还是超出开始的预期的，毕竟6月那时候只是想复刻...
 
 {% gallery %}
-![](/img/captures/media-player/ch2-41.jpg)
-![](/img/captures/media-player/ch2-42.jpg)
-![](/img/captures/media-player/ch2-43.jpg)
-![](/img/captures/media-player/ch2-44.jpg)
-![](/img/captures/media-player/ch2-45.jpg)
-![](/img/captures/media-player/ch2-46.jpg)
-![](/img/captures/media-player/ch2-47.jpg)
-![](/img/captures/media-player/ch2-48.jpg)
-![](/img/captures/media-player/ch2-49.jpg)
+![](/img/captures/application/media-player/ch2-41.jpg)
+![](/img/captures/application/media-player/ch2-42.jpg)
+![](/img/captures/application/media-player/ch2-43.jpg)
+![](/img/captures/application/media-player/ch2-44.jpg)
+![](/img/captures/application/media-player/ch2-45.jpg)
+![](/img/captures/application/media-player/ch2-46.jpg)
+![](/img/captures/application/media-player/ch2-47.jpg)
+![](/img/captures/application/media-player/ch2-48.jpg)
+![](/img/captures/application/media-player/ch2-49.jpg)
 {% endgallery %}
 
 <!-- endtimeline -->
@@ -221,4 +221,4 @@ C语言做得比较差，用前端语言重写一次，反正也没什么新构�
 
 ---
 
-{% series traces %}
+{% series application %}
