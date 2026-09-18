@@ -121,12 +121,28 @@ douban:
   id: 297127246
   book:
     title: "图书"
+    actions:
+      - collect
+      - wish
+      - do
   movie:
     title: "影视"
+    actions:
+      - collect
+      - wish
+      - do
   game:
     title: "游戏"
+    actions:
+      - do
+      - wish
+      - collect
   song:
     title: "音乐"
+    actions:
+      - do
+      - wish
+      - collect
 
 # hexo-generator-search
 search:
