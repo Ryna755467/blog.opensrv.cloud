@@ -149,3 +149,8 @@ search:
   path: search.xml
   field: all # post: 仅文章, page: 仅页面, all: 全部
   content: true # 是否包含全文内容
+
+# sitemap 站点地图
+sitemap:
+  path: sitemap.xml
+  lastmod: true
