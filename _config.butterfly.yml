@@ -737,10 +737,10 @@ google_tag_manager:
 
 # Google Adsense
 google_adsense:
-  enable: false
+  enable: true
   auto_ads: true
   js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
-  client:
+  client: pub-2884386827656472
   enable_page_level_ads: true
 
 # Insert ads manually
@@ -758,10 +758,10 @@ ad:
 # --------------------------------------
 
 site_verification:
-  # - name: google-site-verification
-  #   content: xxxxxx
-  # - name: baidu-site-verification
-  #   content: xxxxxxx
+  - name: google-site-verification
+    content: 5yiiRQQIFa-S2gt3nd7ZwwZzyeD6GWuhiKnk8DETQD0
+  - name: baidu-site-verification
+    content: codeva-mJW8JEXShe
 
 # --------------------------------------
 # Beautify / Effect
