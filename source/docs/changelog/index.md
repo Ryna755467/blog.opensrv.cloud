@@ -8,6 +8,19 @@ toc: false
 
 ## 变更记录
 
+### v1.1.8
+
+**build: 新增站点地图**
+{% note modern no-icon %}
+
+- 新增 `sitemap.xml` 站点地图
+- 修改 Adsense 发布商 ID
+  {% endnote %}
+
+{% note info %}
+**站点地图** 是一份 XML 格式的网页链接清单，记录了网站内所有页面的网址、最后修改时间等信息，专门提供给搜索引擎爬虫读取，加快网页收录，同时便于在 GSC 查看抓取与收录状态。
+{% endnote %}
+
 ### v1.1.7
 
 **feat: 新增谷歌 GSC 网站验证**
