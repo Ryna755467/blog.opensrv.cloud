@@ -8,6 +8,21 @@ toc: false
 
 ## 变更记录
 
+### v1.1.9
+
+**build: 修改 Nginx 缓存策略**
+{% note modern no-icon %}
+
+- Nginx 缓存策略从 **强缓存 + Hash 参数** 改为 **全量协商缓存**
+- 移除 hexo-hash 插件
+- 修复 LaTeX 字符报错问题
+- 增加 `ads.txt` 声明文件
+  {% endnote %}
+
+{% note info %}
+**强缓存 + Hash 参数** `?v=xxx` 可以避免新文件命中浏览器本地缓存，但需要构建流程支持资源哈希；**全量协商缓存** 每次访问页面都会发送校验请求，对服务器资源有更大的压力。
+{% endnote %}
+
 ### v1.1.8
 
 **build: 新增站点地图**

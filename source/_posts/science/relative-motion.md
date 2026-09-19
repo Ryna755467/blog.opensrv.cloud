@@ -29,7 +29,7 @@ katex: true
 {% note modern no-icon %}
 **2015 · 高考全国卷 II**
 
-下暴雨时，有时会发生山体滑坡或泥石流等地质灾害。某地有一倾角为 $\theta=37^\circ\left(\sin37^\circ=\dfrac{3}{5}\right)$ 的山坡 $C$，上面有一质量为 $m$ 的石板 $B$，其上下表面与斜坡平行；$B$ 上有一碎石堆 $A$（含有大量泥土），$A$ 和 $B$ 均处于静止状态。假设某次暴雨中，$A$ 浸透雨水后总质量也为 $m$（可视为质量不变的滑块），在极短时间内，$A、B$ 间的动摩擦因数 $\mu_1$ 减小为 $\dfrac{3}{8}$，$B、C$ 间的动摩擦因数 $\mu_2$ 减小为 $0.5$，$A、B$ 开始运动，此时刻为计时起点；在第 $2\ \text{s}$ 末，$B$ 的上表面突然变为光滑，$\mu_2$ 保持不变。已知 $A$ 开始运动时，$A$ 离 $B$ 下边缘的距离 $l=27\ \text{m}$，$C$ 足够长，设最大静摩擦力等于滑动摩擦力。取重力加速度大小 $g=10\ \text{m/s}^2$。求：
+下暴雨时，有时会发生山体滑坡或泥石流等地质灾害。某地有一倾角为 $\theta=37^\circ\left(\sin37^\circ=\dfrac{3}{5}\right)$ 的山坡 $C$，上面有一质量为 $m$ 的石板 $B$，其上下表面与斜坡平行；$B$ 上有一碎石堆 $A$（含有大量泥土），$A$ 和 $B$ 均处于静止状态。假设某次暴雨中，$A$ 浸透雨水后总质量也为 $m$（可视为质量不变的滑块），在极短时间内，$A$、$B$ 间的动摩擦因数 $\mu_1$ 减小为 $\dfrac{3}{8}$，$B$、$C$ 间的动摩擦因数 $\mu_2$ 减小为 $0.5$，$A$、$B$ 开始运动，此时刻为计时起点；在第 $2\ \text{s}$ 末，$B$ 的上表面突然变为光滑，$\mu_2$ 保持不变。已知 $A$ 开始运动时，$A$ 离 $B$ 下边缘的距离 $l=27\ \text{m}$，$C$ 足够长，设最大静摩擦力等于滑动摩擦力。取重力加速度大小 $g=10\ \text{m/s}^2$。求：
 
 (1) 在 $0\sim2\ \text{s}$ 时间内 $A$ 和 $B$ 加速度的大小；
 (2) $A$ 在 $B$ 上总的运动时间。
@@ -45,40 +45,40 @@ katex: true
 由滑动摩擦力公式和力的平衡条件得
 
 $$
-f_1=\mu_1 N_1 \tag*{①}
+f_1=\mu_1 N_1
 $$
 
 $$
-N_1=mg\cos\theta \tag*{②}
+N_1=mg\cos\theta
 $$
 
 $$
-f_2=\mu_2 N_2 \tag*{③}
+f_2=\mu_2 N_2
 $$
 
 $$
-N_2=N_1'+mg\cos\theta \tag*{④}
+N_2=N_1'+mg\cos\theta
 $$
 
 规定沿斜面向下为正，设 $A$ 和 $B$ 的加速度分别为 $a_1$ 和 $a_2$，由牛顿第二定律得
 
 $$
-mg\sin\theta-f_1=ma_1 \tag*{⑤}
+mg\sin\theta-f_1=ma_1
 $$
 
 $$
-mg\sin\theta-f_2+f_1'=ma_2 \tag*{⑥}
+mg\sin\theta-f_2+f_1'=ma_2
 $$
 
 $$
-N_1=N_1' \tag*{⑦}
+N_1=N_1'
 $$
 
 $$
-f_1=f_1' \tag*{⑧}
+f_1=f_1'
 $$
 
-联立①②③④⑤⑥⑦⑧式，并代入题给数据得
+联立 ①②③④⑤⑥⑦⑧ 式，代入题给数据得
 
 $$
 a_1=3\ \text{m/s}^2
@@ -112,19 +112,19 @@ $$
 ① 对 $A$：
 
 $$
-a=\frac{\sum F}{m}=\sin\theta \,g-\mu_1\cos\theta \,g=3\ \text{m/s}^2 \tag*{①}
+a=\frac{\sum F}{m}=\sin\theta \,g-\mu_1\cos\theta \,g=3\ \text{m/s}^2
 $$
 
 ② 对 $AB$（整体）：
 
 $$
-\sum F=\sin\theta\cdot 2mg-\mu_2\cos\theta\cdot 2mg=4m\ (\text{N}) \tag*{②}
+\sum F=\sin\theta\cdot 2mg-\mu_2\cos\theta\cdot 2mg=4m\ (\text{N})
 $$
 
 ③ 由 $\sum F=m_A a_A+m_B a_B$，解得 $a_B=1\ \text{m/s}^2$。
 
 $$
-\sum F=m_A a_A+m_B a_B \tag*{③}
+\sum F=m_A a_A+m_B a_B
 $$
 
 $$
@@ -153,19 +153,19 @@ $\sum$ 是求和的符号，需要用箭头标明方向，因为方向不同会�
 解：对 $A$：
 
 $$
-a_A=\frac{\sum F}{m}=\mu_1 g=5 \tag*{①}
+a_A=\frac{\sum F}{m}=\mu_1 g=5
 $$
 
 对整体：
 
 $$
-\sum F=\mu_2(m_A+m_B)g=7=m_A a_A+m_B a_B \tag*{②}
+\sum F=\mu_2(m_A+m_B)g=7=m_A a_A+m_B a_B
 $$
 
 代入数据，解得
 
 $$
-a_B=9 \tag*{③}
+a_B=9
 $$
 
 $AB$ 的相对加速度 $a_{AB}=14$
@@ -175,7 +175,7 @@ $AB$ 的相对速度 $v_{AB}=4$
 由 $v^2=2ax$，解得
 
 $$
-L=\frac{4}{7} \tag*{④}
+L=\frac{4}{7}
 $$
 
 {% endnote %}
