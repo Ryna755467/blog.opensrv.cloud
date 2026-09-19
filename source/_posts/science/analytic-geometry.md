@@ -30,7 +30,7 @@ katex: true
 $$
 \begin{cases}
 \dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1 \\
-y=kx+m \quad(\text{如果是 }y=kx-k，\text{那么 }m=-k)
+y=kx+m \quad(\text{如果是 }y=kx-k\text{，那么 }m=-k)
 \end{cases}
 $$
 
