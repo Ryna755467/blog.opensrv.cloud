@@ -1,7 +1,7 @@
 ---
 title: 写作规范
 date: 2026-06-01
-updated: 2026-09-14
+updated: 2026-09-20
 top_img: /img/series/default.jpg
 ---
 
@@ -26,7 +26,7 @@ top_img: /img/series/default.jpg
 
 ## Markdown
 
-此章节介绍 **站点内的文档** 会用到的部分 MD 语法，完整的内容请阅览 [MD 参考文档](https://blog.opensrv.cloud/markdown/ "MD 参考文档")。
+此章节介绍 **站点内的文档** 会用到的部分 MD 语法，完整的内容请阅览 [MD 参考文档](/markdown/ "MD 参考文档")。
 
 ### 标题
 
@@ -154,7 +154,7 @@ I just love **bold text**.
 
 1. 用于 **指向另一篇文档**，例如：
    {% note modern no-icon %}
-   此章节介绍 **站点内的文档** 会用到的部分 MD 语法，完整的内容请阅览 [MD 参考文档](https://blog.opensrv.cloud/markdown/ "MD 参考文档")。
+   此章节介绍 **站点内的文档** 会用到的部分 MD 语法，完整的内容请阅览 [MD 参考文档](/markdown/ "MD 参考文档")。
    {% endnote %}
 
 2. 用于 **跳转外部链接**，例如：
@@ -755,6 +755,30 @@ Object.entries(obj).forEach(([key, value]) => {
 ```
 
 {% endnote %}
+
+### Button
+
+**MD 语法**
+
+```markdown
+{% btn '/markdown/',MD 参考文档,fas fa-location-arrow,pink block right larger %}
+```
+
+**渲染效果**
+
+{% btn '/markdown/',MD 参考文档,fas fa-location-arrow,pink block right larger %}
+
+**使用场景**
+
+仅用于 **文章末尾** 的相关链接，例如：
+
+{% btn 'https://tieba.baidu.com/p/6702507722?fr=personpage',高考数学解析几何 1分钟解 ~,fas fa-location-arrow,pink block right larger %}
+
+**注意事项**
+
+一篇文章 **只能有一个跳转按钮**，固定展示在文末右下角，避免失去焦点。
+
+修改跳转链接和按钮文字即可，其他参数固定不变。
 
 ### Gallery
 
@@ -1368,3 +1392,5 @@ series: javascript
 2. [Butterfly - A Simple and Card UI Design theme for Hexo](https://butterfly.js.org/ "Butterfly 主题文档")
 3. [Rinokit - A react library developed with dumi](https://rinokit.opensrv.cloud/ "Rinokit Library")
 4. [Markdown教程 - 最简明的Markdown语法入门指南](https://markdown.com.cn/ "Markdown 教程")
+
+{% btn '/markdown/',MD 参考文档,fas fa-location-arrow,pink block right larger %}
