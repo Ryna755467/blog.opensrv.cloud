@@ -1,7 +1,7 @@
 ---
 title: 相对运动
 date: 2026-09-16
-updated: 2026-09-16
+updated: 2026-09-20
 top_img: /img/series/science.jpg
 cover: /img/covers/science/relative-motion.jpg
 series: science
@@ -407,7 +407,7 @@ $$L = s_B + d + L_0 = 98\mathrm{m}$$
 
 文章中的手写矢量无法通过 `LaTex` 表达，严谨的解答过程请参考原文。
 
-[百度贴吧 - 分享一下 高考物理 板块运动 的一些 超纲方法~](https://tieba.baidu.com/p/6702318633?fr=personpage)
+{% btn 'https://tieba.baidu.com/p/6702318633?fr=personpage',分享一下 高考物理 板块运动 的一些 超纲方法~,fas fa-location-arrow,pink block right larger %}
 
 ---
 
