@@ -1,7 +1,7 @@
 ---
 title: 解析几何
 date: 2026-09-17
-updated: 2026-09-17
+updated: 2026-09-20
 top_img: /img/series/science.jpg
 cover: /img/covers/science/analytic-geometry.jpg
 series: science
@@ -294,7 +294,7 @@ $$
 
 文章中的部分手写公式无法通过 `LaTex` 表达，严谨的推导过程请参考原文。
 
-[百度贴吧 - 高考数学解析几何 1分钟解 ~](https://tieba.baidu.com/p/6702507722?fr=personpage)
+{% btn 'https://tieba.baidu.com/p/6702507722?fr=personpage',高考数学解析几何 1分钟解 ~,fas fa-location-arrow,pink block right larger %}
 
 ---
 
