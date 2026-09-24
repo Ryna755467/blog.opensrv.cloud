@@ -1,12 +1,20 @@
 ---
 title: 更新日志
 date: 2026-06-01
-updated: 2026-09-20
+updated: 2026-09-24
 top_img: /img/series/default.jpg
 toc: false
 ---
 
 ## 变更记录
+
+### v1.2.1 - 2026.09.24
+
+**docs: QQ Bot 应用实例文档**
+{% note modern no-icon %}
+
+- 新增 QQ Bot 应用实例文档
+  {% endnote %}
 
 ### v1.2.0 - 2026.09.20
 
