@@ -99,7 +99,7 @@ NapCat 可以作为 WebSocket 客户端和服务器，两种方式的通信能�
 
 ### 消息通信
 
-关于 NapCat 的请求接口和消息格式，请参考 [NapCatQQ - 官方文档](https://napneko.github.io/develop/api)
+关于 NapCat 的请求接口和消息格式，请参考 [NapCatQQ - 官方文档](https://napneko.github.io/)
 
 ![请求接口](/img/captures/application/qq-bot/ch2-05.jpg)
 ![消息格式](/img/captures/application/qq-bot/ch2-06.jpg)
@@ -778,7 +778,7 @@ Agent 会自主决策工具调用，只需提供 **入参结构** 即可，它�
 
 # 相关链接
 
-1. [NapCatQQ - 官方文档](https://napneko.github.io/develop/api)
+1. [NapCatQQ - 官方文档](https://napneko.github.io/)
 2. [OneBot - 官方文档](https://onebot.dev/)
 3. [OneBot Server - GitHub](https://github.com/Ryna755467/OneBot-Server)
 4. [LLM API Server - GitHub](https://github.com/Ryna755467/LLM-API-Server)
