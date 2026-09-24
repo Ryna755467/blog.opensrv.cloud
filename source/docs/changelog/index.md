@@ -8,6 +8,14 @@ toc: false
 
 ## 变更记录
 
+### v1.2.2 - 2026.09.24
+
+**docs: 修改 QQ Bot 目录结构**
+{% note modern no-icon %}
+
+- 修改 QQ Bot 文档目录结构
+  {% endnote %}
+
 ### v1.2.1 - 2026.09.24
 
 **docs: QQ Bot 应用实例文档**

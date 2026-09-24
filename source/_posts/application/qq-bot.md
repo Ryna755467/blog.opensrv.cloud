@@ -9,24 +9,26 @@ categories:
   - 应用实例
 ---
 
-# 快速阅读
+## 快速阅读
 
 记录一个基于 OneBot 11 通信标准的 QQ 机器人应用的完整实现过程。
 
-## 功能概述
+### 功能概述
+
+通过与 QQ 机器人帐号对话调用 OneBot Server 应用层提供的服务。
 
 1. 通过 `/upload` 指令上传群文件到服务器；
 2. 通过 `/remote <指令>` 发送 RCON 命令到 `Left 4 Dead 2` 服务器，并回传执行结果；
 3. 通过 `/help` 指令获取所有插件的使用说明；
 4. 直接和大模型进行对话，支持输入文本、图片、视频、文件等内容。
 
-## 核心节点
+### 核心节点
 
 1. NapCat 协议层：负责把 QQ 底层消息封装成 OneBot 标准，并与应用层进行通信；
 2. OneBot Server 应用层：负责解析协议层推送的事件并调用相应的插件进行处理；
 3. LLM API Server 接口层：提供通用的大模型对话服务。
 
-## 运行效果
+### 运行效果
 
 ![多轮会话](/img/captures/application/qq-bot/ch1-01.jpg)
 ![媒体识别](/img/captures/application/qq-bot/ch1-02.jpg)
@@ -35,7 +37,7 @@ categories:
 ![远程控制](/img/captures/application/qq-bot/ch1-05.jpg)
 ![文件上传](/img/captures/application/qq-bot/ch1-06.jpg)
 
-# 协议层
+## 协议层
 
 协议层为 **NapCat**，是一个基于 NTQQ（PC 新版 QQ）的无头 Bot 协议端。
 
@@ -43,7 +45,7 @@ categories:
 你也可以选择 **OpenShamrock** 等其他协议端，一般都是 OneBot 通信标准，它们的区别主要在于底层平台，例如 **OpenShamrock** 的宿主系统是 Android，依赖安卓 QQ 运行（PC 需要安卓模拟器）。
 {% endnote %}
 
-## 核心功能
+### 核心功能
 
 **NapCat** 可以通过 IPC（进程间通信技术） 调用 NTQQ 原生能力，核心作用是把 QQ 底层消息封装成 **OneBot 标准**，并与你的应用层进行通信。
 
@@ -53,7 +55,7 @@ categories:
 
 关于 OneBot 的接口标准，请参考 [OneBot - 官方文档](https://onebot.dev/)
 
-### 网络配置
+#### 网络配置
 
 可以在 WebUI 中修改 NapCat 的 **网络配置**，让它作为客户端或服务器与应用层进行通信。
 
@@ -97,14 +99,14 @@ NapCat 通过 WebSocket 连接到应用层的 `ws` 或 `wss` 地址，可以双�
 NapCat 可以作为 WebSocket 客户端和服务器，两种方式的通信能力是完全一致的，差异仅在于它和应用层 **谁主动发起连接**。
 {% endnote %}
 
-### 消息通信
+#### 消息通信
 
-关于 NapCat 的请求接口和消息格式，请参考 [NapCatQQ - 官方文档](https://napneko.github.io/develop/api)
+关于 NapCat 的请求接口和消息格式，请参考 [NapCatQQ - 官方文档](https://napneko.github.io/)
 
 ![请求接口](/img/captures/application/qq-bot/ch2-05.jpg)
 ![消息格式](/img/captures/application/qq-bot/ch2-06.jpg)
 
-### 管理后台
+#### 管理后台
 
 **WebUI** 是 NapCat 自带的网页管理后台，默认端口为 `6099`，可以用浏览器直接访问操作（需要 Token 鉴权），不用手动修改 `JSON` 配置文件。
 
@@ -123,7 +125,7 @@ NapCat 可以作为 WebSocket 客户端和服务器，两种方式的通信能�
 
 这些安全类的配置不能忽略，非 `80` / `443` 端口不需要经过备案就能开放，如果你的云服务器防火墙没有设置端口拦截，那么程序监听 `0.0.0.0` 就意味着它会直接暴露在公网中。
 
-## 系统结构
+### 系统结构
 
 {% mermaid '{"themeVariables": { "fontSize": "16px" }, "layout": "elk", "look": "handDrawn"}' %}
 flowchart LR
@@ -164,7 +166,7 @@ flowchart LR
 
 {% endmermaid %}
 
-# 应用层
+## 应用层
 
 应用层为 **OneBot Server**，是一个基于 NestJS + WebSocket 实现的 QQ 机器人服务端。
 
@@ -172,14 +174,14 @@ flowchart LR
 你也可以选择开源的机器人框架例如 `NoneBot2`、`Koishi` 等与 NapCat 协议层进行对接，但也带来很多约束，自由度会受到限制。
 {% endnote %}
 
-## 核心功能
+### 核心功能
 
 1. 通过 `/upload` 指令上传群文件到服务器；
 2. 通过 `/remote <指令>` 发送 RCON 命令到 `Left 4 Dead 2` 服务器，并回传执行结果；
 3. 通过 `/help` 指令获取所有插件的使用说明；
 4. 直接和大模型进行对话，支持输入文本、图片、视频、文件等内容。
 
-## 系统结构
+### 系统结构
 
 {% mermaid '{"themeVariables": { "fontSize": "16px" }, "layout": "elk", "look": "handDrawn"}' %}
 flowchart TD
@@ -208,7 +210,7 @@ flowchart TD
 
 {% endmermaid %}
 
-### 会话存储
+#### 会话存储
 
 使用 `MySQL` 存储 `uid` → `conversationId` 的映射与 `NapCatEvent` 事件内容，用于多轮会话和引用回复。
 
@@ -251,7 +253,7 @@ DB_DATABASE=onebot_server
 引用可能是 **递归** 的，因此必须存储完整的原始事件，才能正确还原引用链。
 {% endnote %}
 
-### 资源转存
+#### 资源转存
 
 应用层会启动一个允许公网访问的 **静态资源服务**，把根目录的 `public` 文件夹暴露到公网中。
 
@@ -326,7 +328,7 @@ return prompt;
 NapCat 推送的临时链接后缀名是不可靠的，需要通过二进制识别并追加新的文件名后缀，才能被正确解析。
 {% endnote %}
 
-### 内置插件
+#### 内置插件
 
 应用层收到 NapCat 消息后，会调用相应的插件处理，插件按优先级依次匹配：`UploadPlugin` → `RconPlugin` → `HelpPlugin` → `ChatPlugin`。其中 `ChatPlugin` 为兜底插件，无条件命中，放在最后。
 
@@ -414,7 +416,7 @@ RCON_ALLOWED_USERS=ID1,ID2
 ![引用消息](/img/captures/application/qq-bot/ch3-08.jpg)
 ![递归引用](/img/captures/application/qq-bot/ch3-09.jpg)
 
-### 协议核心
+#### 协议核心
 
 `NapCatService` 是应用层的协议核心，它从 `WebSocket` 客户端接收 NapCat 事件，并按类型分发到插件模块中。
 
@@ -484,11 +486,11 @@ private sendApiRequest(
 }
 ```
 
-# 接口层
+## 接口层
 
 接口层为 **LLM API Server**，是一个基于 NestJS + LangChain 实现的独立部署的通用大模型对话服务，兼容 OpenAI 接口规范。
 
-## 核心功能
+### 核心功能
 
 **功能概述**
 
@@ -553,7 +555,7 @@ private sendApiRequest(
 }
 ```
 
-## 系统结构
+### 系统结构
 
 {% mermaid '{"themeVariables": { "fontSize": "15px" }, "layout": "elk", "look": "handDrawn"}' %}
 flowchart TD
@@ -580,7 +582,7 @@ flowchart TD
 
 {% endmermaid %}
 
-### 会话存储
+#### 会话存储
 
 使用 `MySQL` 存储会话与消息上下文，用于多轮会话。
 
@@ -631,7 +633,7 @@ DB_DATABASE=llm_api_server
 2. 关联字段：外键字段 `message.conversationId`，关联主表主键 `conversation.id`；
 3. 级联行为：开启 **级联删除**，删除会话记录时，会自动删除该会话下所有关联的消息。
 
-### 语义缓存
+#### 语义缓存
 
 使用 `Redis` 存储用户提问的 **向量** 与大模型回答结果，避免语义相似的提问重复调用接口，加快响应速度。
 
@@ -653,7 +655,7 @@ REDIS_PORT=6379
 **向量模型** 可以把文本、图片、视频、音频等内容转换成 **多维数字数组**（即向量），语义相近的内容，在向量空间里距离更近，可用于语义匹配、RAG 检索、内容查重、相似内容推荐等场景。
 {% endnote %}
 
-### 模型配置
+#### 模型配置
 
 服务在顶层文件中统一配置了三类模型，**全局复用实例**，避免在子模块中重复初始化。
 
@@ -719,7 +721,7 @@ private readonly embeddingModel = new OpenAIEmbeddings({
 仅在新会话（未传入 `conversationId`）启用语义缓存，多轮会话依赖历史消息，**不能脱离上下文单独判断语义**，因此不适合用向量语义缓存。
 {% endnote %}
 
-### 工具调用
+#### 工具调用
 
 Agent 会根据用户的提问自主判断是否调用工具函数。
 
@@ -764,7 +766,7 @@ Agent 会根据用户的提问自主判断是否调用工具函数。
 Agent 会自主决策工具调用，只需提供 **入参结构** 即可，它会根据用户的问题，**自动生成** 符合规范的工具调用参数。
 {% endnote %}
 
-## 测试用例
+### 测试用例
 
 ![写入语义缓存](/img/captures/application/qq-bot/ch4-01.jpg)
 ![语义缓存命中](/img/captures/application/qq-bot/ch4-02.jpg)
@@ -776,9 +778,9 @@ Agent 会自主决策工具调用，只需提供 **入参结构** 即可，它�
 ![消息存储](/img/captures/application/qq-bot/ch4-08.jpg)
 ![向量缓存](/img/captures/application/qq-bot/ch4-09.jpg)
 
-# 相关链接
+## 相关链接
 
-1. [NapCatQQ - 官方文档](https://napneko.github.io/develop/api)
+1. [NapCatQQ - 官方文档](https://napneko.github.io/)
 2. [OneBot - 官方文档](https://onebot.dev/)
 3. [OneBot Server - GitHub](https://github.com/Ryna755467/OneBot-Server)
 4. [LLM API Server - GitHub](https://github.com/Ryna755467/LLM-API-Server)
