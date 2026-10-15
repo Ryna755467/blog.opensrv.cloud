@@ -8,6 +8,15 @@ toc: false
 
 ## 变更记录
 
+### v1.2.3 - 2026.10.15
+
+**docs: 新增 HTTP 协议相关文档**
+{% note modern no-icon %}
+
+- 新增 HTTP 消息文档
+- 新增 HTTP 请求文档
+  {% endnote %}
+
 ### v1.2.2 - 2026.09.24
 
 **docs: 修改 QQ Bot 目录结构**
