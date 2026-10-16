@@ -8,6 +8,14 @@ toc: false
 
 ## 变更记录
 
+### v1.2.4 - 2026.10.16
+
+**docs: 新增 HTTP 状态码文档**
+{% note modern no-icon %}
+
+- 新增 HTTP 状态码文档
+  {% endnote %}
+
 ### v1.2.3 - 2026.10.15
 
 **docs: 新增 HTTP 协议相关文档**
