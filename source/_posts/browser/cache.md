@@ -116,7 +116,7 @@ HTTP 缓存存储的是 **一次完整的响应报文**，以请求 `URL` 为索
 
 ### 基本概念
 
-`Service Worker Cache` 是一个由 JS 完全控制的独立缓存层（即 `Cache Storage`），让开发者能以编程的方式完全接管网络请求，从而实现 HTTP 缓存无法做到的精细控制和离线体验。`SW Cache` 通过全局的 `caches` 对象访问（即 `Cache Storage API`），实际存放的是 `Request - Response` 对，以请求为键、响应为值。
+`Service Worker Cache` 是一个由 JS 完全控制的独立缓存层（即 `CacheStorage`），让开发者能以编程的方式完全接管网络请求，从而实现 HTTP 缓存无法做到的精细控制和离线体验。`SW Cache` 通过全局的 `caches` 对象访问（即 `CacheStorage API`），实际存放的是 `Request - Response` 对，以请求为键、响应为值。
 
 当一个受 `Service Worker` 控制的页面发起请求时，缓存查找顺序如下：
 
@@ -127,7 +127,10 @@ HTTP 缓存存储的是 **一次完整的响应报文**，以请求 `URL` 为索
 
 {% note modern no-icon %}
 **Service Worker**
-`SW` 通过主线程的 `navigator.serviceWorker.register()` 方法注册，是一个运行在浏览器后台的独立 `worker` 线程，负责监听 `install` / `activate` / `fetch` / `push` 等事件，执行前端自定义的代码逻辑。
+
+`Web Worker` 会在创建它的页面关闭或刷新后终止，而 `Service Worker` 独立于页面，在浏览器后台运行。
+
+`SW` 通过主线程的 `navigator.serviceWorker.register()` 方法注册，负责监听 `install` / `activate` / `fetch` / `push` 等事件，执行前端自定义的代码逻辑。
 
 - `install`：浏览器开始安装注册的 `Service Worker` 脚本时触发；
 - `activate`：`Service Worker` 完成安装，并且准备好接管页面时触发；
@@ -205,7 +208,7 @@ self.addEventListener("fetch", (event) => {
 ```
 
 {% note warning %}
-`event.respondWith()` 会 **终止浏览器默认的网络请求流程**，它必须返回一个 `Response`，可以从 `Cache Storage` 读取缓存响应，或者通过 `fetch(event.request)` 手动发起请求获取响应。
+`event.respondWith()` 会 **终止浏览器默认的网络请求流程**，它必须返回一个 `Response`，可以从 `CacheStorage` 读取缓存响应，或者通过 `fetch(event.request)` 手动发起请求获取响应。
 {% endnote %}
 
 {% note info %}
@@ -284,7 +287,7 @@ self.addEventListener("activate", (event) => {
 
 ### 存储位置
 
-`Service Worker` 缓存的数据（主要是 `Cache Storage` 中的数据）位于浏览器的用户数据目录中，以 **磁盘文件** 的形式持久化存储，但在无痕模式下可能变为内存存储。
+`Service Worker` 缓存的数据（主要是 `CacheStorage` 中的数据）位于浏览器的用户数据目录中，以 **磁盘文件** 的形式持久化存储，但在无痕模式下可能变为内存存储。
 
 ## bfcache
 
